@@ -1,0 +1,1 @@
+rsync --progress --stats -ruzath -e "ssh -i /Users/liuyaodai/.ssh/id_rsa_vir" "ec2-user@52.88.202.159:/home/ec2-user/experiments_output" ~/Downloads/nccl-experiments-output
