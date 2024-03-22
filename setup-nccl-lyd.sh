@@ -23,7 +23,7 @@ mkdir -p "${TEMP_DIR}"
 
 # Clone the NCCL repo if it doesn't already exist
 if [ ! -d "${NCCL_HOME}" ]; then
-    git clone git@github.com:dailiuyao/NCCL_profile.git "${NCCL_HOME}"
+    git clone https://github.com/dailiuyao/NCCL_profile.git "${NCCL_HOME}"
 fi
 
 # Move to the NCCL directory
