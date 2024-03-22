@@ -6,9 +6,9 @@ export NCCL_HOME="/opt/nccl"
 
 export MSCCL_HOME="/home/ec2-user/deps/msccl"
 
-mkdir -p $SCRIPT_LYD_HOME/logs/nccl
+mpirun --hostfile ~/hostfile --map-by ppr:1:node mkdir -p $SCRIPT_LYD_HOME/logs/nccl
 
-mkdir -p $SCRIPT_LYD_HOME/logs/msccl
+mpirun --hostfile ~/hostfile --map-by ppr:1:node mkdir -p $SCRIPT_LYD_HOME/logs/msccl
 
 mpirun --hostfile ~/hostfile --map-by ppr:8:node \
     -x CUDA_HOME="/usr/local/cuda" \
