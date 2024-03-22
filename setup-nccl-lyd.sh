@@ -36,7 +36,7 @@ git fetch --all
 git checkout "${NCCL_COMMIT}"
 
 # Build NCCL
-make -j src.build
+sudo make -j src.build
 
 # Delete the directory in tmp
 rm -rf "${TEMP_DIR}"
