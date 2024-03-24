@@ -1,0 +1,1141 @@
+# nThread 1 nGpus 1 minBytes 524288 maxBytes 268435456 step: 2(factor) warmup iters: 5 iters: 20 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid 107301 on ip-10-0-10-4 device  0 [0x53] NVIDIA H100 80GB HBM3
+#  Rank  1 Group  0 Pid 107302 on ip-10-0-10-4 device  1 [0x64] NVIDIA H100 80GB HBM3
+#  Rank  2 Group  0 Pid 107303 on ip-10-0-10-4 device  2 [0x75] NVIDIA H100 80GB HBM3
+#  Rank  3 Group  0 Pid 107304 on ip-10-0-10-4 device  3 [0x86] NVIDIA H100 80GB HBM3
+#  Rank  4 Group  0 Pid 107305 on ip-10-0-10-4 device  4 [0x97] NVIDIA H100 80GB HBM3
+#  Rank  5 Group  0 Pid 107306 on ip-10-0-10-4 device  5 [0xa8] NVIDIA H100 80GB HBM3
+#  Rank  6 Group  0 Pid 107307 on ip-10-0-10-4 device  6 [0xb9] NVIDIA H100 80GB HBM3
+#  Rank  7 Group  0 Pid 107308 on ip-10-0-10-4 device  7 [0xca] NVIDIA H100 80GB HBM3
+#  Rank  8 Group  0 Pid   1823 on ip-10-0-9-192 device  0 [0x53] NVIDIA H100 80GB HBM3
+#  Rank  9 Group  0 Pid   1824 on ip-10-0-9-192 device  1 [0x64] NVIDIA H100 80GB HBM3
+#  Rank 10 Group  0 Pid   1825 on ip-10-0-9-192 device  2 [0x75] NVIDIA H100 80GB HBM3
+#  Rank 11 Group  0 Pid   1826 on ip-10-0-9-192 device  3 [0x86] NVIDIA H100 80GB HBM3
+#  Rank 12 Group  0 Pid   1827 on ip-10-0-9-192 device  4 [0x97] NVIDIA H100 80GB HBM3
+#  Rank 13 Group  0 Pid   1828 on ip-10-0-9-192 device  5 [0xa8] NVIDIA H100 80GB HBM3
+#  Rank 14 Group  0 Pid   1829 on ip-10-0-9-192 device  6 [0xb9] NVIDIA H100 80GB HBM3
+#  Rank 15 Group  0 Pid   1830 on ip-10-0-9-192 device  7 [0xca] NVIDIA H100 80GB HBM3
+ip-10-0-10-4:107301:107301 [0] NCCL INFO Bootstrap : Using eth0:10.0.10.4<0>
+ip-10-0-10-4:107301:107301 [0] NCCL INFO NET/Plugin: Failed to find ncclCollNetPlugin_v6 symbol.
+ip-10-0-10-4:107301:107301 [0] NCCL INFO NET/Plugin: Failed to find ncclCollNetPlugin symbol (v4 or v5).
+ip-10-0-10-4:107301:107301 [0] NCCL INFO cudaDriverVersion 12040
+NCCL version 2.14.3+cuda12.4
+ip-10-0-10-4:107301:107464 [0] NCCL INFO NET/OFI Initializing aws-ofi-nccl 1.8.1-aws
+ip-10-0-10-4:107301:107464 [0] NCCL INFO NET/OFI Initializing aws-ofi-nccl 1.8.1-aws
+ip-10-0-10-4:107301:107464 [0] NCCL INFO NET/OFI Using Libfabric version 1.20
+ip-10-0-10-4:107301:107464 [0] NCCL INFO NET/OFI Using CUDA driver version 12040
+ip-10-0-10-4:107301:107464 [0] NCCL INFO NET/OFI Configuring AWS-specific options
+ip-10-0-10-4:107301:107464 [0] NCCL INFO NET/OFI Setting provider_filter to efa
+ip-10-0-10-4:107301:107464 [0] NCCL INFO NET/OFI Disabling NVLS support due to NCCL version 21403
+ip-10-0-10-4:107301:107464 [0] NCCL INFO NET/OFI Setting NCCL_NET_FORCE_FLUSH=0 for Hopper GPUs
+ip-10-0-10-4:107301:107464 [0] NCCL INFO NET/OFI Setting NCCL_NVLSTREE_MAX_CHUNKSIZE to 512KiB
+ip-10-0-10-4:107301:107464 [0] NCCL INFO NET/OFI Running on p5.48xlarge platform, Setting NCCL_TOPO_FILE environment variable to /opt/aws-ofi-nccl/share/aws-ofi-nccl/xml/p5.48xl-topo.xml
+ip-10-0-10-4:107301:107464 [0] NCCL INFO NET/OFI Internode latency set at 75.0 us
+ip-10-0-10-4:107301:107464 [0] NCCL INFO NET/OFI Selected Provider is efa (found 8 nics)
+ip-10-0-10-4:107301:107464 [0] NCCL INFO NET/OFI Using transport protocol SENDRECV
+ip-10-0-10-4:107301:107464 [0] NCCL INFO Using network AWS Libfabric
+ip-10-0-10-4:107301:107464 [0] NCCL INFO DMA-BUF is available on GPU device 0
+ip-10-0-9-192:1823:1823 [0] NCCL INFO cudaDriverVersion 12040
+ip-10-0-10-4:107305:107305 [4] NCCL INFO cudaDriverVersion 12040
+ip-10-0-10-4:107306:107306 [5] NCCL INFO cudaDriverVersion 12040
+ip-10-0-10-4:107303:107303 [2] NCCL INFO cudaDriverVersion 12040
+ip-10-0-10-4:107307:107307 [6] NCCL INFO cudaDriverVersion 12040
+ip-10-0-10-4:107302:107302 [1] NCCL INFO cudaDriverVersion 12040
+ip-10-0-10-4:107304:107304 [3] NCCL INFO cudaDriverVersion 12040
+ip-10-0-10-4:107308:107308 [7] NCCL INFO cudaDriverVersion 12040
+ip-10-0-9-192:1825:1825 [2] NCCL INFO cudaDriverVersion 12040
+ip-10-0-9-192:1828:1828 [5] NCCL INFO cudaDriverVersion 12040
+ip-10-0-9-192:1824:1824 [1] NCCL INFO cudaDriverVersion 12040
+ip-10-0-9-192:1830:1830 [7] NCCL INFO cudaDriverVersion 12040
+ip-10-0-9-192:1829:1829 [6] NCCL INFO cudaDriverVersion 12040
+ip-10-0-9-192:1827:1827 [4] NCCL INFO cudaDriverVersion 12040
+ip-10-0-9-192:1826:1826 [3] NCCL INFO cudaDriverVersion 12040
+ip-10-0-9-192:1823:1823 [0] NCCL INFO Bootstrap : Using eth0:10.0.9.192<0>
+ip-10-0-9-192:1823:1823 [0] NCCL INFO NET/Plugin: Failed to find ncclCollNetPlugin_v6 symbol.
+ip-10-0-9-192:1823:1823 [0] NCCL INFO NET/Plugin: Failed to find ncclCollNetPlugin symbol (v4 or v5).
+ip-10-0-9-192:1823:1990 [0] NCCL INFO NET/OFI Initializing aws-ofi-nccl 1.8.1-aws
+ip-10-0-9-192:1823:1990 [0] NCCL INFO NET/OFI Initializing aws-ofi-nccl 1.8.1-aws
+ip-10-0-9-192:1823:1990 [0] NCCL INFO NET/OFI Using Libfabric version 1.20
+ip-10-0-9-192:1823:1990 [0] NCCL INFO NET/OFI Using CUDA driver version 12040
+ip-10-0-9-192:1823:1990 [0] NCCL INFO NET/OFI Configuring AWS-specific options
+ip-10-0-9-192:1823:1990 [0] NCCL INFO NET/OFI Setting provider_filter to efa
+ip-10-0-9-192:1823:1990 [0] NCCL INFO NET/OFI Disabling NVLS support due to NCCL version 21403
+ip-10-0-9-192:1823:1990 [0] NCCL INFO NET/OFI Setting NCCL_NET_FORCE_FLUSH=0 for Hopper GPUs
+ip-10-0-9-192:1823:1990 [0] NCCL INFO NET/OFI Setting NCCL_NVLSTREE_MAX_CHUNKSIZE to 512KiB
+ip-10-0-9-192:1823:1990 [0] NCCL INFO NET/OFI Running on p5.48xlarge platform, Setting NCCL_TOPO_FILE environment variable to /opt/aws-ofi-nccl/share/aws-ofi-nccl/xml/p5.48xl-topo.xml
+ip-10-0-9-192:1823:1990 [0] NCCL INFO NET/OFI Internode latency set at 75.0 us
+ip-10-0-9-192:1823:1990 [0] NCCL INFO NET/OFI Selected Provider is efa (found 8 nics)
+ip-10-0-9-192:1823:1990 [0] NCCL INFO NET/OFI Using transport protocol SENDRECV
+ip-10-0-9-192:1823:1990 [0] NCCL INFO Using network AWS Libfabric
+ip-10-0-9-192:1823:1990 [0] NCCL INFO DMA-BUF is available on GPU device 0
+ip-10-0-10-4:107305:107305 [4] NCCL INFO Bootstrap : Using eth0:10.0.10.4<0>
+ip-10-0-10-4:107305:107305 [4] NCCL INFO NET/Plugin: Failed to find ncclCollNetPlugin_v6 symbol.
+ip-10-0-10-4:107305:107305 [4] NCCL INFO NET/Plugin: Failed to find ncclCollNetPlugin symbol (v4 or v5).
+ip-10-0-10-4:107305:107473 [4] NCCL INFO NET/OFI Initializing aws-ofi-nccl 1.8.1-aws
+ip-10-0-10-4:107305:107473 [4] NCCL INFO NET/OFI Initializing aws-ofi-nccl 1.8.1-aws
+ip-10-0-10-4:107305:107473 [4] NCCL INFO NET/OFI Using Libfabric version 1.20
+ip-10-0-10-4:107305:107473 [4] NCCL INFO NET/OFI Using CUDA driver version 12040
+ip-10-0-10-4:107305:107473 [4] NCCL INFO NET/OFI Configuring AWS-specific options
+ip-10-0-10-4:107305:107473 [4] NCCL INFO NET/OFI Setting provider_filter to efa
+ip-10-0-10-4:107305:107473 [4] NCCL INFO NET/OFI Disabling NVLS support due to NCCL version 21403
+ip-10-0-10-4:107305:107473 [4] NCCL INFO NET/OFI Setting NCCL_NET_FORCE_FLUSH=0 for Hopper GPUs
+ip-10-0-10-4:107305:107473 [4] NCCL INFO NET/OFI Setting NCCL_NVLSTREE_MAX_CHUNKSIZE to 512KiB
+ip-10-0-10-4:107305:107473 [4] NCCL INFO NET/OFI Running on p5.48xlarge platform, Setting NCCL_TOPO_FILE environment variable to /opt/aws-ofi-nccl/share/aws-ofi-nccl/xml/p5.48xl-topo.xml
+ip-10-0-10-4:107305:107473 [4] NCCL INFO NET/OFI Internode latency set at 75.0 us
+ip-10-0-10-4:107305:107473 [4] NCCL INFO NET/OFI Selected Provider is efa (found 8 nics)
+ip-10-0-10-4:107305:107473 [4] NCCL INFO NET/OFI Using transport protocol SENDRECV
+ip-10-0-10-4:107306:107306 [5] NCCL INFO Bootstrap : Using eth0:10.0.10.4<0>
+ip-10-0-10-4:107306:107306 [5] NCCL INFO NET/Plugin: Failed to find ncclCollNetPlugin_v6 symbol.
+ip-10-0-10-4:107306:107306 [5] NCCL INFO NET/Plugin: Failed to find ncclCollNetPlugin symbol (v4 or v5).
+ip-10-0-10-4:107306:107474 [5] NCCL INFO NET/OFI Initializing aws-ofi-nccl 1.8.1-aws
+ip-10-0-10-4:107306:107474 [5] NCCL INFO NET/OFI Initializing aws-ofi-nccl 1.8.1-aws
+ip-10-0-10-4:107306:107474 [5] NCCL INFO NET/OFI Using Libfabric version 1.20
+ip-10-0-10-4:107306:107474 [5] NCCL INFO NET/OFI Using CUDA driver version 12040
+ip-10-0-10-4:107306:107474 [5] NCCL INFO NET/OFI Configuring AWS-specific options
+ip-10-0-10-4:107306:107474 [5] NCCL INFO NET/OFI Setting provider_filter to efa
+ip-10-0-10-4:107306:107474 [5] NCCL INFO NET/OFI Disabling NVLS support due to NCCL version 21403
+ip-10-0-10-4:107306:107474 [5] NCCL INFO NET/OFI Setting NCCL_NET_FORCE_FLUSH=0 for Hopper GPUs
+ip-10-0-10-4:107306:107474 [5] NCCL INFO NET/OFI Setting NCCL_NVLSTREE_MAX_CHUNKSIZE to 512KiB
+ip-10-0-10-4:107306:107474 [5] NCCL INFO NET/OFI Running on p5.48xlarge platform, Setting NCCL_TOPO_FILE environment variable to /opt/aws-ofi-nccl/share/aws-ofi-nccl/xml/p5.48xl-topo.xml
+ip-10-0-10-4:107306:107474 [5] NCCL INFO NET/OFI Internode latency set at 75.0 us
+ip-10-0-10-4:107306:107474 [5] NCCL INFO NET/OFI Selected Provider is efa (found 8 nics)
+ip-10-0-10-4:107306:107474 [5] NCCL INFO NET/OFI Using transport protocol SENDRECV
+ip-10-0-10-4:107303:107303 [2] NCCL INFO Bootstrap : Using eth0:10.0.10.4<0>
+ip-10-0-10-4:107303:107303 [2] NCCL INFO NET/Plugin: Failed to find ncclCollNetPlugin_v6 symbol.
+ip-10-0-10-4:107303:107303 [2] NCCL INFO NET/Plugin: Failed to find ncclCollNetPlugin symbol (v4 or v5).
+ip-10-0-10-4:107303:107475 [2] NCCL INFO NET/OFI Initializing aws-ofi-nccl 1.8.1-aws
+ip-10-0-10-4:107303:107475 [2] NCCL INFO NET/OFI Initializing aws-ofi-nccl 1.8.1-aws
+ip-10-0-10-4:107303:107475 [2] NCCL INFO NET/OFI Using Libfabric version 1.20
+ip-10-0-10-4:107303:107475 [2] NCCL INFO NET/OFI Using CUDA driver version 12040
+ip-10-0-10-4:107303:107475 [2] NCCL INFO NET/OFI Configuring AWS-specific options
+ip-10-0-10-4:107303:107475 [2] NCCL INFO NET/OFI Setting provider_filter to efa
+ip-10-0-10-4:107303:107475 [2] NCCL INFO NET/OFI Disabling NVLS support due to NCCL version 21403
+ip-10-0-10-4:107303:107475 [2] NCCL INFO NET/OFI Setting NCCL_NET_FORCE_FLUSH=0 for Hopper GPUs
+ip-10-0-10-4:107303:107475 [2] NCCL INFO NET/OFI Setting NCCL_NVLSTREE_MAX_CHUNKSIZE to 512KiB
+ip-10-0-10-4:107303:107475 [2] NCCL INFO NET/OFI Running on p5.48xlarge platform, Setting NCCL_TOPO_FILE environment variable to /opt/aws-ofi-nccl/share/aws-ofi-nccl/xml/p5.48xl-topo.xml
+ip-10-0-10-4:107303:107475 [2] NCCL INFO NET/OFI Internode latency set at 75.0 us
+ip-10-0-10-4:107303:107475 [2] NCCL INFO NET/OFI Selected Provider is efa (found 8 nics)
+ip-10-0-10-4:107303:107475 [2] NCCL INFO NET/OFI Using transport protocol SENDRECV
+ip-10-0-10-4:107307:107307 [6] NCCL INFO Bootstrap : Using eth0:10.0.10.4<0>
+ip-10-0-10-4:107307:107307 [6] NCCL INFO NET/Plugin: Failed to find ncclCollNetPlugin_v6 symbol.
+ip-10-0-10-4:107307:107307 [6] NCCL INFO NET/Plugin: Failed to find ncclCollNetPlugin symbol (v4 or v5).
+ip-10-0-10-4:107307:107476 [6] NCCL INFO NET/OFI Initializing aws-ofi-nccl 1.8.1-aws
+ip-10-0-10-4:107307:107476 [6] NCCL INFO NET/OFI Initializing aws-ofi-nccl 1.8.1-aws
+ip-10-0-10-4:107307:107476 [6] NCCL INFO NET/OFI Using Libfabric version 1.20
+ip-10-0-10-4:107307:107476 [6] NCCL INFO NET/OFI Using CUDA driver version 12040
+ip-10-0-10-4:107307:107476 [6] NCCL INFO NET/OFI Configuring AWS-specific options
+ip-10-0-10-4:107307:107476 [6] NCCL INFO NET/OFI Setting provider_filter to efa
+ip-10-0-10-4:107307:107476 [6] NCCL INFO NET/OFI Disabling NVLS support due to NCCL version 21403
+ip-10-0-10-4:107307:107476 [6] NCCL INFO NET/OFI Setting NCCL_NET_FORCE_FLUSH=0 for Hopper GPUs
+ip-10-0-10-4:107307:107476 [6] NCCL INFO NET/OFI Setting NCCL_NVLSTREE_MAX_CHUNKSIZE to 512KiB
+ip-10-0-10-4:107307:107476 [6] NCCL INFO NET/OFI Running on p5.48xlarge platform, Setting NCCL_TOPO_FILE environment variable to /opt/aws-ofi-nccl/share/aws-ofi-nccl/xml/p5.48xl-topo.xml
+ip-10-0-10-4:107307:107476 [6] NCCL INFO NET/OFI Internode latency set at 75.0 us
+ip-10-0-10-4:107307:107476 [6] NCCL INFO NET/OFI Selected Provider is efa (found 8 nics)
+ip-10-0-10-4:107307:107476 [6] NCCL INFO NET/OFI Using transport protocol SENDRECV
+ip-10-0-10-4:107302:107302 [1] NCCL INFO Bootstrap : Using eth0:10.0.10.4<0>
+ip-10-0-10-4:107302:107302 [1] NCCL INFO NET/Plugin: Failed to find ncclCollNetPlugin_v6 symbol.
+ip-10-0-10-4:107302:107302 [1] NCCL INFO NET/Plugin: Failed to find ncclCollNetPlugin symbol (v4 or v5).
+ip-10-0-10-4:107302:107477 [1] NCCL INFO NET/OFI Initializing aws-ofi-nccl 1.8.1-aws
+ip-10-0-10-4:107302:107477 [1] NCCL INFO NET/OFI Initializing aws-ofi-nccl 1.8.1-aws
+ip-10-0-10-4:107302:107477 [1] NCCL INFO NET/OFI Using Libfabric version 1.20
+ip-10-0-10-4:107302:107477 [1] NCCL INFO NET/OFI Using CUDA driver version 12040
+ip-10-0-10-4:107302:107477 [1] NCCL INFO NET/OFI Configuring AWS-specific options
+ip-10-0-10-4:107308:107308 [7] NCCL INFO Bootstrap : Using eth0:10.0.10.4<0>
+ip-10-0-10-4:107302:107477 [1] NCCL INFO NET/OFI Setting provider_filter to efa
+ip-10-0-10-4:107302:107477 [1] NCCL INFO NET/OFI Disabling NVLS support due to NCCL version 21403
+ip-10-0-10-4:107302:107477 [1] NCCL INFO NET/OFI Setting NCCL_NET_FORCE_FLUSH=0 for Hopper GPUs
+ip-10-0-10-4:107302:107477 [1] NCCL INFO NET/OFI Setting NCCL_NVLSTREE_MAX_CHUNKSIZE to 512KiB
+ip-10-0-10-4:107302:107477 [1] NCCL INFO NET/OFI Running on p5.48xlarge platform, Setting NCCL_TOPO_FILE environment variable to /opt/aws-ofi-nccl/share/aws-ofi-nccl/xml/p5.48xl-topo.xml
+ip-10-0-10-4:107302:107477 [1] NCCL INFO NET/OFI Internode latency set at 75.0 us
+ip-10-0-10-4:107302:107477 [1] NCCL INFO NET/OFI Selected Provider is efa (found 8 nics)
+ip-10-0-10-4:107302:107477 [1] NCCL INFO NET/OFI Using transport protocol SENDRECV
+ip-10-0-10-4:107308:107308 [7] NCCL INFO NET/Plugin: Failed to find ncclCollNetPlugin_v6 symbol.
+ip-10-0-10-4:107308:107308 [7] NCCL INFO NET/Plugin: Failed to find ncclCollNetPlugin symbol (v4 or v5).
+ip-10-0-10-4:107308:107478 [7] NCCL INFO NET/OFI Initializing aws-ofi-nccl 1.8.1-aws
+ip-10-0-10-4:107308:107478 [7] NCCL INFO NET/OFI Initializing aws-ofi-nccl 1.8.1-aws
+ip-10-0-10-4:107308:107478 [7] NCCL INFO NET/OFI Using Libfabric version 1.20
+ip-10-0-10-4:107308:107478 [7] NCCL INFO NET/OFI Using CUDA driver version 12040
+ip-10-0-10-4:107308:107478 [7] NCCL INFO NET/OFI Configuring AWS-specific options
+ip-10-0-10-4:107308:107478 [7] NCCL INFO NET/OFI Setting provider_filter to efa
+ip-10-0-10-4:107308:107478 [7] NCCL INFO NET/OFI Disabling NVLS support due to NCCL version 21403
+ip-10-0-10-4:107308:107478 [7] NCCL INFO NET/OFI Setting NCCL_NET_FORCE_FLUSH=0 for Hopper GPUs
+ip-10-0-10-4:107308:107478 [7] NCCL INFO NET/OFI Setting NCCL_NVLSTREE_MAX_CHUNKSIZE to 512KiB
+ip-10-0-10-4:107308:107478 [7] NCCL INFO NET/OFI Running on p5.48xlarge platform, Setting NCCL_TOPO_FILE environment variable to /opt/aws-ofi-nccl/share/aws-ofi-nccl/xml/p5.48xl-topo.xml
+ip-10-0-10-4:107308:107478 [7] NCCL INFO NET/OFI Internode latency set at 75.0 us
+ip-10-0-10-4:107308:107478 [7] NCCL INFO NET/OFI Selected Provider is efa (found 8 nics)
+ip-10-0-10-4:107308:107478 [7] NCCL INFO NET/OFI Using transport protocol SENDRECV
+ip-10-0-10-4:107305:107473 [4] NCCL INFO Using network AWS Libfabric
+ip-10-0-10-4:107305:107473 [4] NCCL INFO DMA-BUF is available on GPU device 4
+ip-10-0-10-4:107304:107304 [3] NCCL INFO Bootstrap : Using eth0:10.0.10.4<0>
+ip-10-0-10-4:107304:107304 [3] NCCL INFO NET/Plugin: Failed to find ncclCollNetPlugin_v6 symbol.
+ip-10-0-10-4:107304:107304 [3] NCCL INFO NET/Plugin: Failed to find ncclCollNetPlugin symbol (v4 or v5).
+ip-10-0-10-4:107304:107479 [3] NCCL INFO NET/OFI Initializing aws-ofi-nccl 1.8.1-aws
+ip-10-0-10-4:107304:107479 [3] NCCL INFO NET/OFI Initializing aws-ofi-nccl 1.8.1-aws
+ip-10-0-10-4:107304:107479 [3] NCCL INFO NET/OFI Using Libfabric version 1.20
+ip-10-0-10-4:107304:107479 [3] NCCL INFO NET/OFI Using CUDA driver version 12040
+ip-10-0-10-4:107304:107479 [3] NCCL INFO NET/OFI Configuring AWS-specific options
+ip-10-0-10-4:107304:107479 [3] NCCL INFO NET/OFI Setting provider_filter to efa
+ip-10-0-10-4:107304:107479 [3] NCCL INFO NET/OFI Disabling NVLS support due to NCCL version 21403
+ip-10-0-10-4:107304:107479 [3] NCCL INFO NET/OFI Setting NCCL_NET_FORCE_FLUSH=0 for Hopper GPUs
+ip-10-0-10-4:107304:107479 [3] NCCL INFO NET/OFI Setting NCCL_NVLSTREE_MAX_CHUNKSIZE to 512KiB
+ip-10-0-10-4:107304:107479 [3] NCCL INFO NET/OFI Running on p5.48xlarge platform, Setting NCCL_TOPO_FILE environment variable to /opt/aws-ofi-nccl/share/aws-ofi-nccl/xml/p5.48xl-topo.xml
+ip-10-0-10-4:107304:107479 [3] NCCL INFO NET/OFI Internode latency set at 75.0 us
+ip-10-0-10-4:107304:107479 [3] NCCL INFO NET/OFI Selected Provider is efa (found 8 nics)
+ip-10-0-10-4:107304:107479 [3] NCCL INFO NET/OFI Using transport protocol SENDRECV
+ip-10-0-10-4:107306:107474 [5] NCCL INFO Using network AWS Libfabric
+ip-10-0-10-4:107306:107474 [5] NCCL INFO DMA-BUF is available on GPU device 5
+ip-10-0-10-4:107303:107475 [2] NCCL INFO Using network AWS Libfabric
+ip-10-0-10-4:107303:107475 [2] NCCL INFO DMA-BUF is available on GPU device 2
+ip-10-0-10-4:107307:107476 [6] NCCL INFO Using network AWS Libfabric
+ip-10-0-10-4:107307:107476 [6] NCCL INFO DMA-BUF is available on GPU device 6
+ip-10-0-10-4:107302:107477 [1] NCCL INFO Using network AWS Libfabric
+ip-10-0-10-4:107302:107477 [1] NCCL INFO DMA-BUF is available on GPU device 1
+ip-10-0-10-4:107308:107478 [7] NCCL INFO Using network AWS Libfabric
+ip-10-0-10-4:107308:107478 [7] NCCL INFO DMA-BUF is available on GPU device 7
+ip-10-0-10-4:107304:107479 [3] NCCL INFO Using network AWS Libfabric
+ip-10-0-10-4:107304:107479 [3] NCCL INFO DMA-BUF is available on GPU device 3
+ip-10-0-9-192:1825:1825 [2] NCCL INFO Bootstrap : Using eth0:10.0.9.192<0>
+ip-10-0-9-192:1825:1825 [2] NCCL INFO NET/Plugin: Failed to find ncclCollNetPlugin_v6 symbol.
+ip-10-0-9-192:1825:1825 [2] NCCL INFO NET/Plugin: Failed to find ncclCollNetPlugin symbol (v4 or v5).
+ip-10-0-9-192:1825:1991 [2] NCCL INFO NET/OFI Initializing aws-ofi-nccl 1.8.1-aws
+ip-10-0-9-192:1825:1991 [2] NCCL INFO NET/OFI Initializing aws-ofi-nccl 1.8.1-aws
+ip-10-0-9-192:1825:1991 [2] NCCL INFO NET/OFI Using Libfabric version 1.20
+ip-10-0-9-192:1825:1991 [2] NCCL INFO NET/OFI Using CUDA driver version 12040
+ip-10-0-9-192:1825:1991 [2] NCCL INFO NET/OFI Configuring AWS-specific options
+ip-10-0-9-192:1825:1991 [2] NCCL INFO NET/OFI Setting provider_filter to efa
+ip-10-0-9-192:1825:1991 [2] NCCL INFO NET/OFI Disabling NVLS support due to NCCL version 21403
+ip-10-0-9-192:1825:1991 [2] NCCL INFO NET/OFI Setting NCCL_NET_FORCE_FLUSH=0 for Hopper GPUs
+ip-10-0-9-192:1825:1991 [2] NCCL INFO NET/OFI Setting NCCL_NVLSTREE_MAX_CHUNKSIZE to 512KiB
+ip-10-0-9-192:1825:1991 [2] NCCL INFO NET/OFI Running on p5.48xlarge platform, Setting NCCL_TOPO_FILE environment variable to /opt/aws-ofi-nccl/share/aws-ofi-nccl/xml/p5.48xl-topo.xml
+ip-10-0-9-192:1825:1991 [2] NCCL INFO NET/OFI Internode latency set at 75.0 us
+ip-10-0-9-192:1825:1991 [2] NCCL INFO NET/OFI Selected Provider is efa (found 8 nics)
+ip-10-0-9-192:1825:1991 [2] NCCL INFO NET/OFI Using transport protocol SENDRECV
+ip-10-0-9-192:1828:1828 [5] NCCL INFO Bootstrap : Using eth0:10.0.9.192<0>
+ip-10-0-9-192:1828:1828 [5] NCCL INFO NET/Plugin: Failed to find ncclCollNetPlugin_v6 symbol.
+ip-10-0-9-192:1828:1828 [5] NCCL INFO NET/Plugin: Failed to find ncclCollNetPlugin symbol (v4 or v5).
+ip-10-0-9-192:1828:1992 [5] NCCL INFO NET/OFI Initializing aws-ofi-nccl 1.8.1-aws
+ip-10-0-9-192:1828:1992 [5] NCCL INFO NET/OFI Initializing aws-ofi-nccl 1.8.1-aws
+ip-10-0-9-192:1828:1992 [5] NCCL INFO NET/OFI Using Libfabric version 1.20
+ip-10-0-9-192:1828:1992 [5] NCCL INFO NET/OFI Using CUDA driver version 12040
+ip-10-0-9-192:1828:1992 [5] NCCL INFO NET/OFI Configuring AWS-specific options
+ip-10-0-9-192:1828:1992 [5] NCCL INFO NET/OFI Setting provider_filter to efa
+ip-10-0-9-192:1828:1992 [5] NCCL INFO NET/OFI Disabling NVLS support due to NCCL version 21403
+ip-10-0-9-192:1828:1992 [5] NCCL INFO NET/OFI Setting NCCL_NET_FORCE_FLUSH=0 for Hopper GPUs
+ip-10-0-9-192:1828:1992 [5] NCCL INFO NET/OFI Setting NCCL_NVLSTREE_MAX_CHUNKSIZE to 512KiB
+ip-10-0-9-192:1828:1992 [5] NCCL INFO NET/OFI Running on p5.48xlarge platform, Setting NCCL_TOPO_FILE environment variable to /opt/aws-ofi-nccl/share/aws-ofi-nccl/xml/p5.48xl-topo.xml
+ip-10-0-9-192:1828:1992 [5] NCCL INFO NET/OFI Internode latency set at 75.0 us
+ip-10-0-9-192:1828:1992 [5] NCCL INFO NET/OFI Selected Provider is efa (found 8 nics)
+ip-10-0-9-192:1828:1992 [5] NCCL INFO NET/OFI Using transport protocol SENDRECV
+ip-10-0-9-192:1824:1824 [1] NCCL INFO Bootstrap : Using eth0:10.0.9.192<0>
+ip-10-0-9-192:1824:1824 [1] NCCL INFO NET/Plugin: Failed to find ncclCollNetPlugin_v6 symbol.
+ip-10-0-9-192:1824:1824 [1] NCCL INFO NET/Plugin: Failed to find ncclCollNetPlugin symbol (v4 or v5).
+ip-10-0-9-192:1824:1993 [1] NCCL INFO NET/OFI Initializing aws-ofi-nccl 1.8.1-aws
+ip-10-0-9-192:1824:1993 [1] NCCL INFO NET/OFI Initializing aws-ofi-nccl 1.8.1-aws
+ip-10-0-9-192:1824:1993 [1] NCCL INFO NET/OFI Using Libfabric version 1.20
+ip-10-0-9-192:1824:1993 [1] NCCL INFO NET/OFI Using CUDA driver version 12040
+ip-10-0-9-192:1824:1993 [1] NCCL INFO NET/OFI Configuring AWS-specific options
+ip-10-0-9-192:1824:1993 [1] NCCL INFO NET/OFI Setting provider_filter to efa
+ip-10-0-9-192:1824:1993 [1] NCCL INFO NET/OFI Disabling NVLS support due to NCCL version 21403
+ip-10-0-9-192:1824:1993 [1] NCCL INFO NET/OFI Setting NCCL_NET_FORCE_FLUSH=0 for Hopper GPUs
+ip-10-0-9-192:1824:1993 [1] NCCL INFO NET/OFI Setting NCCL_NVLSTREE_MAX_CHUNKSIZE to 512KiB
+ip-10-0-9-192:1824:1993 [1] NCCL INFO NET/OFI Running on p5.48xlarge platform, Setting NCCL_TOPO_FILE environment variable to /opt/aws-ofi-nccl/share/aws-ofi-nccl/xml/p5.48xl-topo.xml
+ip-10-0-9-192:1824:1993 [1] NCCL INFO NET/OFI Internode latency set at 75.0 us
+ip-10-0-9-192:1824:1993 [1] NCCL INFO NET/OFI Selected Provider is efa (found 8 nics)
+ip-10-0-9-192:1824:1993 [1] NCCL INFO NET/OFI Using transport protocol SENDRECV
+ip-10-0-9-192:1825:1991 [2] NCCL INFO Using network AWS Libfabric
+ip-10-0-9-192:1825:1991 [2] NCCL INFO DMA-BUF is available on GPU device 2
+ip-10-0-9-192:1828:1992 [5] NCCL INFO Using network AWS Libfabric
+ip-10-0-9-192:1828:1992 [5] NCCL INFO DMA-BUF is available on GPU device 5
+ip-10-0-9-192:1826:1826 [3] NCCL INFO Bootstrap : Using eth0:10.0.9.192<0>
+ip-10-0-9-192:1830:1830 [7] NCCL INFO Bootstrap : Using eth0:10.0.9.192<0>
+ip-10-0-9-192:1826:1826 [3] NCCL INFO NET/Plugin: Failed to find ncclCollNetPlugin_v6 symbol.
+ip-10-0-9-192:1826:1826 [3] NCCL INFO NET/Plugin: Failed to find ncclCollNetPlugin symbol (v4 or v5).
+ip-10-0-9-192:1830:1830 [7] NCCL INFO NET/Plugin: Failed to find ncclCollNetPlugin_v6 symbol.
+ip-10-0-9-192:1830:1830 [7] NCCL INFO NET/Plugin: Failed to find ncclCollNetPlugin symbol (v4 or v5).
+ip-10-0-9-192:1827:1827 [4] NCCL INFO Bootstrap : Using eth0:10.0.9.192<0>
+ip-10-0-9-192:1827:1827 [4] NCCL INFO NET/Plugin: Failed to find ncclCollNetPlugin_v6 symbol.
+ip-10-0-9-192:1827:1827 [4] NCCL INFO NET/Plugin: Failed to find ncclCollNetPlugin symbol (v4 or v5).
+ip-10-0-9-192:1824:1993 [1] NCCL INFO Using network AWS Libfabric
+ip-10-0-9-192:1824:1993 [1] NCCL INFO DMA-BUF is available on GPU device 1
+ip-10-0-9-192:1826:1994 [3] NCCL INFO NET/OFI Initializing aws-ofi-nccl 1.8.1-aws
+ip-10-0-9-192:1826:1994 [3] NCCL INFO NET/OFI Initializing aws-ofi-nccl 1.8.1-aws
+ip-10-0-9-192:1826:1994 [3] NCCL INFO NET/OFI Using Libfabric version 1.20
+ip-10-0-9-192:1830:1995 [7] NCCL INFO NET/OFI Initializing aws-ofi-nccl 1.8.1-aws
+ip-10-0-9-192:1830:1995 [7] NCCL INFO NET/OFI Initializing aws-ofi-nccl 1.8.1-aws
+ip-10-0-9-192:1830:1995 [7] NCCL INFO NET/OFI Using Libfabric version 1.20
+ip-10-0-9-192:1829:1829 [6] NCCL INFO Bootstrap : Using eth0:10.0.9.192<0>
+ip-10-0-9-192:1826:1994 [3] NCCL INFO NET/OFI Using CUDA driver version 12040
+ip-10-0-9-192:1826:1994 [3] NCCL INFO NET/OFI Configuring AWS-specific options
+ip-10-0-9-192:1826:1994 [3] NCCL INFO NET/OFI Setting provider_filter to efa
+ip-10-0-9-192:1826:1994 [3] NCCL INFO NET/OFI Disabling NVLS support due to NCCL version 21403
+ip-10-0-9-192:1826:1994 [3] NCCL INFO NET/OFI Setting NCCL_NET_FORCE_FLUSH=0 for Hopper GPUs
+ip-10-0-9-192:1826:1994 [3] NCCL INFO NET/OFI Setting NCCL_NVLSTREE_MAX_CHUNKSIZE to 512KiB
+ip-10-0-9-192:1826:1994 [3] NCCL INFO NET/OFI Running on p5.48xlarge platform, Setting NCCL_TOPO_FILE environment variable to /opt/aws-ofi-nccl/share/aws-ofi-nccl/xml/p5.48xl-topo.xml
+ip-10-0-9-192:1826:1994 [3] NCCL INFO NET/OFI Internode latency set at 75.0 us
+ip-10-0-9-192:1830:1995 [7] NCCL INFO NET/OFI Using CUDA driver version 12040
+ip-10-0-9-192:1830:1995 [7] NCCL INFO NET/OFI Configuring AWS-specific options
+ip-10-0-9-192:1830:1995 [7] NCCL INFO NET/OFI Setting provider_filter to efa
+ip-10-0-9-192:1830:1995 [7] NCCL INFO NET/OFI Disabling NVLS support due to NCCL version 21403
+ip-10-0-9-192:1830:1995 [7] NCCL INFO NET/OFI Setting NCCL_NET_FORCE_FLUSH=0 for Hopper GPUs
+ip-10-0-9-192:1830:1995 [7] NCCL INFO NET/OFI Setting NCCL_NVLSTREE_MAX_CHUNKSIZE to 512KiB
+ip-10-0-9-192:1830:1995 [7] NCCL INFO NET/OFI Running on p5.48xlarge platform, Setting NCCL_TOPO_FILE environment variable to /opt/aws-ofi-nccl/share/aws-ofi-nccl/xml/p5.48xl-topo.xml
+ip-10-0-9-192:1830:1995 [7] NCCL INFO NET/OFI Internode latency set at 75.0 us
+ip-10-0-9-192:1826:1994 [3] NCCL INFO NET/OFI Selected Provider is efa (found 8 nics)
+ip-10-0-9-192:1826:1994 [3] NCCL INFO NET/OFI Using transport protocol SENDRECV
+ip-10-0-9-192:1830:1995 [7] NCCL INFO NET/OFI Selected Provider is efa (found 8 nics)
+ip-10-0-9-192:1830:1995 [7] NCCL INFO NET/OFI Using transport protocol SENDRECV
+ip-10-0-9-192:1829:1829 [6] NCCL INFO NET/Plugin: Failed to find ncclCollNetPlugin_v6 symbol.
+ip-10-0-9-192:1829:1829 [6] NCCL INFO NET/Plugin: Failed to find ncclCollNetPlugin symbol (v4 or v5).
+ip-10-0-9-192:1827:1996 [4] NCCL INFO NET/OFI Initializing aws-ofi-nccl 1.8.1-aws
+ip-10-0-9-192:1827:1996 [4] NCCL INFO NET/OFI Initializing aws-ofi-nccl 1.8.1-aws
+ip-10-0-9-192:1827:1996 [4] NCCL INFO NET/OFI Using Libfabric version 1.20
+ip-10-0-9-192:1827:1996 [4] NCCL INFO NET/OFI Using CUDA driver version 12040
+ip-10-0-9-192:1827:1996 [4] NCCL INFO NET/OFI Configuring AWS-specific options
+ip-10-0-9-192:1827:1996 [4] NCCL INFO NET/OFI Setting provider_filter to efa
+ip-10-0-9-192:1827:1996 [4] NCCL INFO NET/OFI Disabling NVLS support due to NCCL version 21403
+ip-10-0-9-192:1827:1996 [4] NCCL INFO NET/OFI Setting NCCL_NET_FORCE_FLUSH=0 for Hopper GPUs
+ip-10-0-9-192:1827:1996 [4] NCCL INFO NET/OFI Setting NCCL_NVLSTREE_MAX_CHUNKSIZE to 512KiB
+ip-10-0-9-192:1827:1996 [4] NCCL INFO NET/OFI Running on p5.48xlarge platform, Setting NCCL_TOPO_FILE environment variable to /opt/aws-ofi-nccl/share/aws-ofi-nccl/xml/p5.48xl-topo.xml
+ip-10-0-9-192:1827:1996 [4] NCCL INFO NET/OFI Internode latency set at 75.0 us
+ip-10-0-9-192:1827:1996 [4] NCCL INFO NET/OFI Selected Provider is efa (found 8 nics)
+ip-10-0-9-192:1827:1996 [4] NCCL INFO NET/OFI Using transport protocol SENDRECV
+ip-10-0-9-192:1829:1997 [6] NCCL INFO NET/OFI Initializing aws-ofi-nccl 1.8.1-aws
+ip-10-0-9-192:1829:1997 [6] NCCL INFO NET/OFI Initializing aws-ofi-nccl 1.8.1-aws
+ip-10-0-9-192:1829:1997 [6] NCCL INFO NET/OFI Using Libfabric version 1.20
+ip-10-0-9-192:1829:1997 [6] NCCL INFO NET/OFI Using CUDA driver version 12040
+ip-10-0-9-192:1829:1997 [6] NCCL INFO NET/OFI Configuring AWS-specific options
+ip-10-0-9-192:1829:1997 [6] NCCL INFO NET/OFI Setting provider_filter to efa
+ip-10-0-9-192:1829:1997 [6] NCCL INFO NET/OFI Disabling NVLS support due to NCCL version 21403
+ip-10-0-9-192:1829:1997 [6] NCCL INFO NET/OFI Setting NCCL_NET_FORCE_FLUSH=0 for Hopper GPUs
+ip-10-0-9-192:1829:1997 [6] NCCL INFO NET/OFI Setting NCCL_NVLSTREE_MAX_CHUNKSIZE to 512KiB
+ip-10-0-9-192:1829:1997 [6] NCCL INFO NET/OFI Running on p5.48xlarge platform, Setting NCCL_TOPO_FILE environment variable to /opt/aws-ofi-nccl/share/aws-ofi-nccl/xml/p5.48xl-topo.xml
+ip-10-0-9-192:1829:1997 [6] NCCL INFO NET/OFI Internode latency set at 75.0 us
+ip-10-0-9-192:1829:1997 [6] NCCL INFO NET/OFI Selected Provider is efa (found 8 nics)
+ip-10-0-9-192:1829:1997 [6] NCCL INFO NET/OFI Using transport protocol SENDRECV
+ip-10-0-9-192:1826:1994 [3] NCCL INFO Using network AWS Libfabric
+ip-10-0-9-192:1826:1994 [3] NCCL INFO DMA-BUF is available on GPU device 3
+ip-10-0-9-192:1830:1995 [7] NCCL INFO Using network AWS Libfabric
+ip-10-0-9-192:1830:1995 [7] NCCL INFO DMA-BUF is available on GPU device 7
+ip-10-0-9-192:1827:1996 [4] NCCL INFO Using network AWS Libfabric
+ip-10-0-9-192:1827:1996 [4] NCCL INFO DMA-BUF is available on GPU device 4
+ip-10-0-9-192:1829:1997 [6] NCCL INFO Using network AWS Libfabric
+ip-10-0-9-192:1829:1997 [6] NCCL INFO DMA-BUF is available on GPU device 6
+ip-10-0-10-4:107308:107478 [7] NCCL INFO Setting affinity for GPU 7 to ffffffff,ffff0000,00000000,ffffffff,ffff0000,00000000
+ip-10-0-10-4:107305:107473 [4] NCCL INFO Setting affinity for GPU 4 to ffffffff,ffff0000,00000000,ffffffff,ffff0000,00000000
+ip-10-0-10-4:107307:107476 [6] NCCL INFO Setting affinity for GPU 6 to ffffffff,ffff0000,00000000,ffffffff,ffff0000,00000000
+ip-10-0-10-4:107304:107479 [3] NCCL INFO Setting affinity for GPU 3 to ffff,ffffffff,00000000,0000ffff,ffffffff
+ip-10-0-10-4:107306:107474 [5] NCCL INFO Setting affinity for GPU 5 to ffffffff,ffff0000,00000000,ffffffff,ffff0000,00000000
+ip-10-0-10-4:107303:107475 [2] NCCL INFO Setting affinity for GPU 2 to ffff,ffffffff,00000000,0000ffff,ffffffff
+ip-10-0-10-4:107302:107477 [1] NCCL INFO Setting affinity for GPU 1 to ffff,ffffffff,00000000,0000ffff,ffffffff
+
+[LYD INFO init.cc] graph->nchannels in tree is: 8
+
+[LYD INFO init.cc] graph->nchannels in net is: 0
+
+[LYD INFO init.cc] graph->nchannels in tree is: 8
+
+[LYD INFO init.cc] graph->nchannels in net is: 0
+ip-10-0-10-4:107301:107464 [0] NCCL INFO Setting affinity for GPU 0 to ffff,ffffffff,00000000,0000ffff,ffffffff
+
+[LYD INFO init.cc] graph->nchannels in tree is: 8
+
+[LYD INFO init.cc] graph->nchannels in net is: 0
+
+[LYD INFO init.cc] graph->nchannels in tree is: 8
+
+[LYD INFO init.cc] graph->nchannels in tree is: 8
+
+[LYD INFO init.cc] graph->nchannels in net is: 0
+
+[LYD INFO init.cc] graph->nchannels in net is: 0
+ip-10-0-9-192:1824:1993 [1] NCCL INFO Setting affinity for GPU 1 to ffff,ffffffff,00000000,0000ffff,ffffffff
+ip-10-0-9-192:1828:1992 [5] NCCL INFO Setting affinity for GPU 5 to ffffffff,ffff0000,00000000,ffffffff,ffff0000,00000000
+ip-10-0-9-192:1829:1997 [6] NCCL INFO Setting affinity for GPU 6 to ffffffff,ffff0000,00000000,ffffffff,ffff0000,00000000
+ip-10-0-9-192:1826:1994 [3] NCCL INFO Setting affinity for GPU 3 to ffff,ffffffff,00000000,0000ffff,ffffffff
+ip-10-0-9-192:1825:1991 [2] NCCL INFO Setting affinity for GPU 2 to ffff,ffffffff,00000000,0000ffff,ffffffff
+ip-10-0-9-192:1827:1996 [4] NCCL INFO Setting affinity for GPU 4 to ffffffff,ffff0000,00000000,ffffffff,ffff0000,00000000
+
+[LYD INFO init.cc] graph->nchannels in tree is: 8
+
+[LYD INFO init.cc] graph->nchannels in net is: 0
+ip-10-0-9-192:1830:1995 [7] NCCL INFO Setting affinity for GPU 7 to ffffffff,ffff0000,00000000,ffffffff,ffff0000,00000000
+
+[LYD INFO init.cc] graph->nchannels in tree is: 8
+
+[LYD INFO init.cc] graph->nchannels in net is: 0
+
+[LYD INFO init.cc] graph->nchannels in tree is: 8
+
+[LYD INFO init.cc] graph->nchannels in net is: 0
+
+[LYD INFO init.cc] graph->nchannels in tree is: 8
+
+[LYD INFO init.cc] graph->nchannels in net is: 0
+ip-10-0-9-192:1823:1990 [0] NCCL INFO Setting affinity for GPU 0 to ffff,ffffffff,00000000,0000ffff,ffffffff
+
+[LYD INFO init.cc] graph->nchannels in tree is: 8
+
+[LYD INFO init.cc] graph->nchannels in net is: 0
+
+[LYD INFO init.cc] graph->nchannels in tree is: 8
+
+[LYD INFO init.cc] graph->nchannels in net is: 0
+
+[LYD INFO init.cc] graph->nchannels in tree is: 8
+
+[LYD INFO init.cc] graph->nchannels in net is: 0
+
+[LYD INFO init.cc] graph->nchannels in tree is: 8
+
+[LYD INFO init.cc] graph->nchannels in net is: 0
+
+[LYD INFO init.cc] graph->nchannels in tree is: 8
+
+[LYD INFO init.cc] graph->nchannels in net is: 0
+
+[LYD INFO init.cc] graph->nchannels in tree is: 8
+
+[LYD INFO init.cc] graph->nchannels in net is: 0
+
+[LYD INFO init.cc] graph->nchannels in tree is: 8
+
+[LYD INFO init.cc] graph->nchannels in net is: 0
+ip-10-0-10-4:107307:107476 [6] NCCL INFO Trees [0] 7/-1/-1->6->5 [1] 7/-1/-1->6->5 [2] 7/-1/-1->6->5 [3] 7/-1/-1->6->5 [4] 7/-1/-1->6->5 [5] 7/-1/-1->6->5 [6] 7/-1/-1->6->5 [7] 7/-1/-1->6->5 [8] 7/-1/-1->6->5 [9] 7/-1/-1->6->5 [10] 7/-1/-1->6->5 [11] 7/-1/-1->6->5 [12] 7/-1/-1->6->5 [13] 7/-1/-1->6->5 [14] 7/-1/-1->6->5 [15] 7/-1/-1->6->5
+ip-10-0-10-4:107304:107479 [3] NCCL INFO Trees [0] 4/-1/-1->3->2 [1] 4/-1/-1->3->2 [2] 4/-1/-1->3->2 [3] 4/-1/-1->3->2 [4] 4/-1/-1->3->2 [5] 4/-1/-1->3->2 [6] 4/-1/-1->3->2 [7] 4/-1/-1->3->2 [8] 4/-1/-1->3->2 [9] 4/-1/-1->3->2 [10] 4/-1/-1->3->2 [11] 4/-1/-1->3->2 [12] 4/-1/-1->3->2 [13] 4/-1/-1->3->2 [14] 4/-1/-1->3->2 [15] 4/-1/-1->3->2
+ip-10-0-10-4:107305:107473 [4] NCCL INFO Trees [0] 5/-1/-1->4->3 [1] 5/-1/-1->4->3 [2] 5/-1/-1->4->3 [3] 5/-1/-1->4->3 [4] 5/-1/-1->4->3 [5] 5/-1/-1->4->3 [6] 5/-1/-1->4->3 [7] 5/-1/-1->4->3 [8] 5/-1/-1->4->3 [9] 5/-1/-1->4->3 [10] 5/-1/-1->4->3 [11] 5/-1/-1->4->3 [12] 5/-1/-1->4->3 [13] 5/-1/-1->4->3 [14] 5/-1/-1->4->3 [15] 5/-1/-1->4->3
+ip-10-0-10-4:107308:107478 [7] NCCL INFO Trees [0] -1/-1/-1->7->6 [1] -1/-1/-1->7->6 [2] -1/-1/-1->7->6 [3] -1/-1/-1->7->6 [4] 0/-1/-1->7->6 [5] 0/-1/-1->7->6 [6] 0/-1/-1->7->6 [7] 0/-1/-1->7->6 [8] -1/-1/-1->7->6 [9] -1/-1/-1->7->6 [10] -1/-1/-1->7->6 [11] -1/-1/-1->7->6 [12] 0/-1/-1->7->6 [13] 0/-1/-1->7->6 [14] 0/-1/-1->7->6 [15] 0/-1/-1->7->6
+ip-10-0-10-4:107306:107474 [5] NCCL INFO Trees [0] 6/-1/-1->5->4 [1] 6/-1/-1->5->4 [2] 6/-1/-1->5->4 [3] 6/-1/-1->5->4 [4] 6/-1/-1->5->4 [5] 6/-1/-1->5->4 [6] 6/-1/-1->5->4 [7] 6/-1/-1->5->4 [8] 6/-1/-1->5->4 [9] 6/-1/-1->5->4 [10] 6/-1/-1->5->4 [11] 6/-1/-1->5->4 [12] 6/-1/-1->5->4 [13] 6/-1/-1->5->4 [14] 6/-1/-1->5->4 [15] 6/-1/-1->5->4
+ip-10-0-10-4:107301:107464 [0] NCCL INFO Channel 00/16 :    0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15
+ip-10-0-10-4:107301:107464 [0] NCCL INFO Channel 01/16 :    0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15
+ip-10-0-10-4:107301:107464 [0] NCCL INFO Channel 02/16 :    0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15
+ip-10-0-10-4:107301:107464 [0] NCCL INFO Channel 03/16 :    0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15
+ip-10-0-10-4:107301:107464 [0] NCCL INFO Channel 04/16 :    0   7   6   5   4   3   2   9   8  15  14  13  12  11  10   1
+ip-10-0-10-4:107301:107464 [0] NCCL INFO Channel 05/16 :    0   7   6   5   4   3   2   9   8  15  14  13  12  11  10   1
+ip-10-0-10-4:107301:107464 [0] NCCL INFO Channel 06/16 :    0   7   6   5   4   3   2   9   8  15  14  13  12  11  10   1
+ip-10-0-10-4:107301:107464 [0] NCCL INFO Channel 07/16 :    0   7   6   5   4   3   2   9   8  15  14  13  12  11  10   1
+ip-10-0-10-4:107302:107477 [1] NCCL INFO Trees [0] 2/-1/-1->1->0 [1] 2/-1/-1->1->0 [2] 2/-1/-1->1->0 [3] 2/-1/-1->1->0 [4] 2/9/-1->1->-1 [5] 2/9/-1->1->-1 [6] 2/9/-1->1->-1 [7] 2/9/-1->1->-1 [8] 2/-1/-1->1->0 [9] 2/-1/-1->1->0 [10] 2/-1/-1->1->0 [11] 2/-1/-1->1->0 [12] 2/-1/-1->1->9 [13] 2/-1/-1->1->9 [14] 2/-1/-1->1->9 [15] 2/-1/-1->1->9
+ip-10-0-10-4:107301:107464 [0] NCCL INFO Channel 08/16 :    0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15
+ip-10-0-10-4:107301:107464 [0] NCCL INFO Channel 09/16 :    0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15
+ip-10-0-10-4:107301:107464 [0] NCCL INFO Channel 10/16 :    0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15
+ip-10-0-10-4:107301:107464 [0] NCCL INFO Channel 11/16 :    0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15
+ip-10-0-10-4:107301:107464 [0] NCCL INFO Channel 12/16 :    0   7   6   5   4   3   2   9   8  15  14  13  12  11  10   1
+ip-10-0-10-4:107301:107464 [0] NCCL INFO Channel 13/16 :    0   7   6   5   4   3   2   9   8  15  14  13  12  11  10   1
+ip-10-0-10-4:107301:107464 [0] NCCL INFO Channel 14/16 :    0   7   6   5   4   3   2   9   8  15  14  13  12  11  10   1
+ip-10-0-10-4:107303:107475 [2] NCCL INFO Trees [0] 3/-1/-1->2->1 [1] 3/-1/-1->2->1 [2] 3/-1/-1->2->1 [3] 3/-1/-1->2->1 [4] 3/-1/-1->2->1 [5] 3/-1/-1->2->1 [6] 3/-1/-1->2->1 [7] 3/-1/-1->2->1 [8] 3/-1/-1->2->1 [9] 3/-1/-1->2->1 [10] 3/-1/-1->2->1 [11] 3/-1/-1->2->1 [12] 3/-1/-1->2->1 [13] 3/-1/-1->2->1 [14] 3/-1/-1->2->1 [15] 3/-1/-1->2->1
+ip-10-0-10-4:107301:107464 [0] NCCL INFO Channel 15/16 :    0   7   6   5   4   3   2   9   8  15  14  13  12  11  10   1
+ip-10-0-10-4:107301:107464 [0] NCCL INFO Trees [0] 1/8/-1->0->-1 [1] 1/8/-1->0->-1 [2] 1/8/-1->0->-1 [3] 1/8/-1->0->-1 [4] -1/-1/-1->0->7 [5] -1/-1/-1->0->7 [6] -1/-1/-1->0->7 [7] -1/-1/-1->0->7 [8] 1/-1/-1->0->8 [9] 1/-1/-1->0->8 [10] 1/-1/-1->0->8 [11] 1/-1/-1->0->8 [12] -1/-1/-1->0->7 [13] -1/-1/-1->0->7 [14] -1/-1/-1->0->7 [15] -1/-1/-1->0->7
+ip-10-0-9-192:1823:1990 [0] NCCL INFO Trees [0] 9/-1/-1->8->0 [1] 9/-1/-1->8->0 [2] 9/-1/-1->8->0 [3] 9/-1/-1->8->0 [4] -1/-1/-1->8->15 [5] -1/-1/-1->8->15 [6] -1/-1/-1->8->15 [7] -1/-1/-1->8->15 [8] 9/0/-1->8->-1 [9] 9/0/-1->8->-1 [10] 9/0/-1->8->-1 [11] 9/0/-1->8->-1 [12] -1/-1/-1->8->15 [13] -1/-1/-1->8->15 [14] -1/-1/-1->8->15 [15] -1/-1/-1->8->15
+ip-10-0-9-192:1830:1995 [7] NCCL INFO Trees [0] -1/-1/-1->15->14 [1] -1/-1/-1->15->14 [2] -1/-1/-1->15->14 [3] -1/-1/-1->15->14 [4] 8/-1/-1->15->14 [5] 8/-1/-1->15->14 [6] 8/-1/-1->15->14 [7] 8/-1/-1->15->14 [8] -1/-1/-1->15->14 [9] -1/-1/-1->15->14 [10] -1/-1/-1->15->14 [11] -1/-1/-1->15->14 [12] 8/-1/-1->15->14 [13] 8/-1/-1->15->14 [14] 8/-1/-1->15->14 [15] 8/-1/-1->15->14
+ip-10-0-9-192:1828:1992 [5] NCCL INFO Trees [0] 14/-1/-1->13->12 [1] 14/-1/-1->13->12 [2] 14/-1/-1->13->12 [3] 14/-1/-1->13->12 [4] 14/-1/-1->13->12 [5] 14/-1/-1->13->12 [6] 14/-1/-1->13->12 [7] 14/-1/-1->13->12 [8] 14/-1/-1->13->12 [9] 14/-1/-1->13->12 [10] 14/-1/-1->13->12 [11] 14/-1/-1->13->12 [12] 14/-1/-1->13->12 [13] 14/-1/-1->13->12 [14] 14/-1/-1->13->12 [15] 14/-1/-1->13->12
+ip-10-0-9-192:1825:1991 [2] NCCL INFO Trees [0] 11/-1/-1->10->9 [1] 11/-1/-1->10->9 [2] 11/-1/-1->10->9 [3] 11/-1/-1->10->9 [4] 11/-1/-1->10->9 [5] 11/-1/-1->10->9 [6] 11/-1/-1->10->9 [7] 11/-1/-1->10->9 [8] 11/-1/-1->10->9 [9] 11/-1/-1->10->9 [10] 11/-1/-1->10->9 [11] 11/-1/-1->10->9 [12] 11/-1/-1->10->9 [13] 11/-1/-1->10->9 [14] 11/-1/-1->10->9 [15] 11/-1/-1->10->9
+ip-10-0-9-192:1829:1997 [6] NCCL INFO Trees [0] 15/-1/-1->14->13 [1] 15/-1/-1->14->13 [2] 15/-1/-1->14->13 [3] 15/-1/-1->14->13 [4] 15/-1/-1->14->13 [5] 15/-1/-1->14->13 [6] 15/-1/-1->14->13 [7] 15/-1/-1->14->13 [8] 15/-1/-1->14->13 [9] 15/-1/-1->14->13 [10] 15/-1/-1->14->13 [11] 15/-1/-1->14->13 [12] 15/-1/-1->14->13 [13] 15/-1/-1->14->13 [14] 15/-1/-1->14->13 [15] 15/-1/-1->14->13
+ip-10-0-9-192:1824:1993 [1] NCCL INFO Trees [0] 10/-1/-1->9->8 [1] 10/-1/-1->9->8 [2] 10/-1/-1->9->8 [3] 10/-1/-1->9->8 [4] 10/-1/-1->9->1 [5] 10/-1/-1->9->1 [6] 10/-1/-1->9->1 [7] 10/-1/-1->9->1 [8] 10/-1/-1->9->8 [9] 10/-1/-1->9->8 [10] 10/-1/-1->9->8 [11] 10/-1/-1->9->8 [12] 10/1/-1->9->-1 [13] 10/1/-1->9->-1 [14] 10/1/-1->9->-1 [15] 10/1/-1->9->-1
+ip-10-0-9-192:1826:1994 [3] NCCL INFO Trees [0] 12/-1/-1->11->10 [1] 12/-1/-1->11->10 [2] 12/-1/-1->11->10 [3] 12/-1/-1->11->10 [4] 12/-1/-1->11->10 [5] 12/-1/-1->11->10 [6] 12/-1/-1->11->10 [7] 12/-1/-1->11->10 [8] 12/-1/-1->11->10 [9] 12/-1/-1->11->10 [10] 12/-1/-1->11->10 [11] 12/-1/-1->11->10 [12] 12/-1/-1->11->10 [13] 12/-1/-1->11->10 [14] 12/-1/-1->11->10 [15] 12/-1/-1->11->10
+ip-10-0-9-192:1827:1996 [4] NCCL INFO Trees [0] 13/-1/-1->12->11 [1] 13/-1/-1->12->11 [2] 13/-1/-1->12->11 [3] 13/-1/-1->12->11 [4] 13/-1/-1->12->11 [5] 13/-1/-1->12->11 [6] 13/-1/-1->12->11 [7] 13/-1/-1->12->11 [8] 13/-1/-1->12->11 [9] 13/-1/-1->12->11 [10] 13/-1/-1->12->11 [11] 13/-1/-1->12->11 [12] 13/-1/-1->12->11 [13] 13/-1/-1->12->11 [14] 13/-1/-1->12->11 [15] 13/-1/-1->12->11
+ip-10-0-10-4:107306:107474 [5] NCCL INFO Channel 00/0 : 5[a8000] -> 6[b9000] via P2P/IPC
+ip-10-0-10-4:107302:107477 [1] NCCL INFO Channel 00/0 : 1[64000] -> 2[75000] via P2P/IPC
+ip-10-0-10-4:107305:107473 [4] NCCL INFO Channel 00/0 : 4[97000] -> 5[a8000] via P2P/IPC
+ip-10-0-10-4:107307:107476 [6] NCCL INFO Channel 00/0 : 6[b9000] -> 7[ca000] via P2P/IPC
+ip-10-0-10-4:107306:107474 [5] NCCL INFO Channel 01/0 : 5[a8000] -> 6[b9000] via P2P/IPC
+ip-10-0-10-4:107305:107473 [4] NCCL INFO Channel 01/0 : 4[97000] -> 5[a8000] via P2P/IPC
+ip-10-0-10-4:107302:107477 [1] NCCL INFO Channel 01/0 : 1[64000] -> 2[75000] via P2P/IPC
+ip-10-0-10-4:107306:107474 [5] NCCL INFO Channel 02/0 : 5[a8000] -> 6[b9000] via P2P/IPC
+ip-10-0-10-4:107307:107476 [6] NCCL INFO Channel 01/0 : 6[b9000] -> 7[ca000] via P2P/IPC
+ip-10-0-9-192:1824:1993 [1] NCCL INFO Channel 00/0 : 9[64000] -> 10[75000] via P2P/IPC
+ip-10-0-9-192:1825:1991 [2] NCCL INFO Channel 00/0 : 10[75000] -> 11[86000] via P2P/IPC
+ip-10-0-9-192:1826:1994 [3] NCCL INFO Channel 00/0 : 11[86000] -> 12[97000] via P2P/IPC
+ip-10-0-10-4:107305:107473 [4] NCCL INFO Channel 02/0 : 4[97000] -> 5[a8000] via P2P/IPC
+ip-10-0-9-192:1827:1996 [4] NCCL INFO Channel 00/0 : 12[97000] -> 13[a8000] via P2P/IPC
+ip-10-0-10-4:107302:107477 [1] NCCL INFO Channel 02/0 : 1[64000] -> 2[75000] via P2P/IPC
+ip-10-0-10-4:107307:107476 [6] NCCL INFO Channel 02/0 : 6[b9000] -> 7[ca000] via P2P/IPC
+ip-10-0-10-4:107306:107474 [5] NCCL INFO Channel 03/0 : 5[a8000] -> 6[b9000] via P2P/IPC
+ip-10-0-9-192:1828:1992 [5] NCCL INFO Channel 00/0 : 13[a8000] -> 14[b9000] via P2P/IPC
+ip-10-0-9-192:1829:1997 [6] NCCL INFO Channel 00/0 : 14[b9000] -> 15[ca000] via P2P/IPC
+ip-10-0-10-4:107305:107473 [4] NCCL INFO Channel 03/0 : 4[97000] -> 5[a8000] via P2P/IPC
+ip-10-0-9-192:1825:1991 [2] NCCL INFO Channel 01/0 : 10[75000] -> 11[86000] via P2P/IPC
+ip-10-0-9-192:1824:1993 [1] NCCL INFO Channel 01/0 : 9[64000] -> 10[75000] via P2P/IPC
+ip-10-0-10-4:107302:107477 [1] NCCL INFO Channel 03/0 : 1[64000] -> 2[75000] via P2P/IPC
+ip-10-0-9-192:1826:1994 [3] NCCL INFO Channel 01/0 : 11[86000] -> 12[97000] via P2P/IPC
+ip-10-0-10-4:107307:107476 [6] NCCL INFO Channel 03/0 : 6[b9000] -> 7[ca000] via P2P/IPC
+ip-10-0-9-192:1827:1996 [4] NCCL INFO Channel 01/0 : 12[97000] -> 13[a8000] via P2P/IPC
+ip-10-0-10-4:107306:107474 [5] NCCL INFO Channel 08/0 : 5[a8000] -> 6[b9000] via P2P/IPC
+ip-10-0-9-192:1828:1992 [5] NCCL INFO Channel 01/0 : 13[a8000] -> 14[b9000] via P2P/IPC
+ip-10-0-9-192:1829:1997 [6] NCCL INFO Channel 01/0 : 14[b9000] -> 15[ca000] via P2P/IPC
+ip-10-0-10-4:107305:107473 [4] NCCL INFO Channel 08/0 : 4[97000] -> 5[a8000] via P2P/IPC
+ip-10-0-9-192:1825:1991 [2] NCCL INFO Channel 02/0 : 10[75000] -> 11[86000] via P2P/IPC
+ip-10-0-9-192:1824:1993 [1] NCCL INFO Channel 02/0 : 9[64000] -> 10[75000] via P2P/IPC
+ip-10-0-9-192:1827:1996 [4] NCCL INFO Channel 02/0 : 12[97000] -> 13[a8000] via P2P/IPC
+ip-10-0-10-4:107302:107477 [1] NCCL INFO Channel 08/0 : 1[64000] -> 2[75000] via P2P/IPC
+ip-10-0-9-192:1826:1994 [3] NCCL INFO Channel 02/0 : 11[86000] -> 12[97000] via P2P/IPC
+ip-10-0-10-4:107306:107474 [5] NCCL INFO Channel 09/0 : 5[a8000] -> 6[b9000] via P2P/IPC
+ip-10-0-10-4:107307:107476 [6] NCCL INFO Channel 08/0 : 6[b9000] -> 7[ca000] via P2P/IPC
+ip-10-0-9-192:1828:1992 [5] NCCL INFO Channel 02/0 : 13[a8000] -> 14[b9000] via P2P/IPC
+ip-10-0-10-4:107305:107473 [4] NCCL INFO Channel 09/0 : 4[97000] -> 5[a8000] via P2P/IPC
+ip-10-0-9-192:1829:1997 [6] NCCL INFO Channel 02/0 : 14[b9000] -> 15[ca000] via P2P/IPC
+ip-10-0-9-192:1825:1991 [2] NCCL INFO Channel 03/0 : 10[75000] -> 11[86000] via P2P/IPC
+ip-10-0-9-192:1824:1993 [1] NCCL INFO Channel 03/0 : 9[64000] -> 10[75000] via P2P/IPC
+ip-10-0-10-4:107302:107477 [1] NCCL INFO Channel 09/0 : 1[64000] -> 2[75000] via P2P/IPC
+ip-10-0-9-192:1827:1996 [4] NCCL INFO Channel 03/0 : 12[97000] -> 13[a8000] via P2P/IPC
+ip-10-0-9-192:1826:1994 [3] NCCL INFO Channel 03/0 : 11[86000] -> 12[97000] via P2P/IPC
+ip-10-0-10-4:107307:107476 [6] NCCL INFO Channel 09/0 : 6[b9000] -> 7[ca000] via P2P/IPC
+ip-10-0-10-4:107306:107474 [5] NCCL INFO Channel 10/0 : 5[a8000] -> 6[b9000] via P2P/IPC
+ip-10-0-10-4:107304:107479 [3] NCCL INFO Channel 00/0 : 3[86000] -> 4[97000] via P2P/IPC
+ip-10-0-9-192:1828:1992 [5] NCCL INFO Channel 03/0 : 13[a8000] -> 14[b9000] via P2P/IPC
+ip-10-0-10-4:107305:107473 [4] NCCL INFO Channel 10/0 : 4[97000] -> 5[a8000] via P2P/IPC
+ip-10-0-9-192:1829:1997 [6] NCCL INFO Channel 03/0 : 14[b9000] -> 15[ca000] via P2P/IPC
+ip-10-0-9-192:1825:1991 [2] NCCL INFO Channel 08/0 : 10[75000] -> 11[86000] via P2P/IPC
+ip-10-0-9-192:1824:1993 [1] NCCL INFO Channel 08/0 : 9[64000] -> 10[75000] via P2P/IPC
+ip-10-0-10-4:107302:107477 [1] NCCL INFO Channel 10/0 : 1[64000] -> 2[75000] via P2P/IPC
+ip-10-0-9-192:1827:1996 [4] NCCL INFO Channel 08/0 : 12[97000] -> 13[a8000] via P2P/IPC
+ip-10-0-10-4:107306:107474 [5] NCCL INFO Channel 11/0 : 5[a8000] -> 6[b9000] via P2P/IPC
+ip-10-0-10-4:107307:107476 [6] NCCL INFO Channel 10/0 : 6[b9000] -> 7[ca000] via P2P/IPC
+ip-10-0-9-192:1826:1994 [3] NCCL INFO Channel 08/0 : 11[86000] -> 12[97000] via P2P/IPC
+ip-10-0-10-4:107304:107479 [3] NCCL INFO Channel 01/0 : 3[86000] -> 4[97000] via P2P/IPC
+ip-10-0-9-192:1828:1992 [5] NCCL INFO Channel 08/0 : 13[a8000] -> 14[b9000] via P2P/IPC
+ip-10-0-10-4:107305:107473 [4] NCCL INFO Channel 11/0 : 4[97000] -> 5[a8000] via P2P/IPC
+ip-10-0-9-192:1829:1997 [6] NCCL INFO Channel 08/0 : 14[b9000] -> 15[ca000] via P2P/IPC
+ip-10-0-9-192:1825:1991 [2] NCCL INFO Channel 09/0 : 10[75000] -> 11[86000] via P2P/IPC
+ip-10-0-9-192:1824:1993 [1] NCCL INFO Channel 09/0 : 9[64000] -> 10[75000] via P2P/IPC
+ip-10-0-10-4:107307:107476 [6] NCCL INFO Channel 11/0 : 6[b9000] -> 7[ca000] via P2P/IPC
+ip-10-0-9-192:1827:1996 [4] NCCL INFO Channel 09/0 : 12[97000] -> 13[a8000] via P2P/IPC
+ip-10-0-10-4:107304:107479 [3] NCCL INFO Channel 02/0 : 3[86000] -> 4[97000] via P2P/IPC
+ip-10-0-9-192:1826:1994 [3] NCCL INFO Channel 09/0 : 11[86000] -> 12[97000] via P2P/IPC
+ip-10-0-9-192:1828:1992 [5] NCCL INFO Channel 09/0 : 13[a8000] -> 14[b9000] via P2P/IPC
+ip-10-0-9-192:1829:1997 [6] NCCL INFO Channel 09/0 : 14[b9000] -> 15[ca000] via P2P/IPC
+ip-10-0-9-192:1825:1991 [2] NCCL INFO Channel 10/0 : 10[75000] -> 11[86000] via P2P/IPC
+ip-10-0-10-4:107304:107479 [3] NCCL INFO Channel 03/0 : 3[86000] -> 4[97000] via P2P/IPC
+ip-10-0-10-4:107302:107477 [1] NCCL INFO Channel 11/0 : 1[64000] -> 2[75000] via P2P/IPC
+ip-10-0-9-192:1824:1993 [1] NCCL INFO Channel 10/0 : 9[64000] -> 10[75000] via P2P/IPC
+ip-10-0-9-192:1827:1996 [4] NCCL INFO Channel 10/0 : 12[97000] -> 13[a8000] via P2P/IPC
+ip-10-0-9-192:1826:1994 [3] NCCL INFO Channel 10/0 : 11[86000] -> 12[97000] via P2P/IPC
+ip-10-0-9-192:1828:1992 [5] NCCL INFO Channel 10/0 : 13[a8000] -> 14[b9000] via P2P/IPC
+ip-10-0-9-192:1829:1997 [6] NCCL INFO Channel 10/0 : 14[b9000] -> 15[ca000] via P2P/IPC
+ip-10-0-9-192:1825:1991 [2] NCCL INFO Channel 11/0 : 10[75000] -> 11[86000] via P2P/IPC
+ip-10-0-9-192:1824:1993 [1] NCCL INFO Channel 11/0 : 9[64000] -> 10[75000] via P2P/IPC
+ip-10-0-9-192:1827:1996 [4] NCCL INFO Channel 11/0 : 12[97000] -> 13[a8000] via P2P/IPC
+ip-10-0-9-192:1823:1990 [0] NCCL INFO Channel 00/0 : 7[ca000] -> 8[53000] [receive] via NET/AWS Libfabric/0/GDRDMA
+ip-10-0-9-192:1826:1994 [3] NCCL INFO Channel 11/0 : 11[86000] -> 12[97000] via P2P/IPC
+ip-10-0-10-4:107301:107464 [0] NCCL INFO Channel 00/0 : 15[ca000] -> 0[53000] [receive] via NET/AWS Libfabric/0/GDRDMA
+ip-10-0-9-192:1830:1995 [7] NCCL INFO Channel 00/0 : 15[ca000] -> 0[53000] [send] via NET/AWS Libfabric/0(8)/GDRDMA
+ip-10-0-10-4:107308:107478 [7] NCCL INFO Channel 00/0 : 7[ca000] -> 8[53000] [send] via NET/AWS Libfabric/0(0)/GDRDMA
+ip-10-0-9-192:1828:1992 [5] NCCL INFO Channel 11/0 : 13[a8000] -> 14[b9000] via P2P/IPC
+ip-10-0-9-192:1829:1997 [6] NCCL INFO Channel 11/0 : 14[b9000] -> 15[ca000] via P2P/IPC
+ip-10-0-10-4:107303:107475 [2] NCCL INFO Channel 00/0 : 2[75000] -> 3[86000] via P2P/IPC
+ip-10-0-10-4:107304:107479 [3] NCCL INFO Channel 08/0 : 3[86000] -> 4[97000] via P2P/IPC
+ip-10-0-10-4:107303:107475 [2] NCCL INFO Channel 01/0 : 2[75000] -> 3[86000] via P2P/IPC
+ip-10-0-10-4:107304:107479 [3] NCCL INFO Channel 09/0 : 3[86000] -> 4[97000] via P2P/IPC
+ip-10-0-10-4:107303:107475 [2] NCCL INFO Channel 02/0 : 2[75000] -> 3[86000] via P2P/IPC
+ip-10-0-10-4:107304:107479 [3] NCCL INFO Channel 10/0 : 3[86000] -> 4[97000] via P2P/IPC
+ip-10-0-10-4:107303:107475 [2] NCCL INFO Channel 03/0 : 2[75000] -> 3[86000] via P2P/IPC
+ip-10-0-10-4:107304:107479 [3] NCCL INFO Channel 11/0 : 3[86000] -> 4[97000] via P2P/IPC
+ip-10-0-10-4:107303:107475 [2] NCCL INFO Channel 08/0 : 2[75000] -> 3[86000] via P2P/IPC
+ip-10-0-10-4:107303:107475 [2] NCCL INFO Channel 09/0 : 2[75000] -> 3[86000] via P2P/IPC
+ip-10-0-10-4:107303:107475 [2] NCCL INFO Channel 10/0 : 2[75000] -> 3[86000] via P2P/IPC
+ip-10-0-10-4:107303:107475 [2] NCCL INFO Channel 11/0 : 2[75000] -> 3[86000] via P2P/IPC
+ip-10-0-9-192:1830:1995 [7] NCCL INFO Channel 01/0 : 15[ca000] -> 0[53000] [send] via NET/AWS Libfabric/1(8)/GDRDMA
+ip-10-0-10-4:107308:107478 [7] NCCL INFO Channel 01/0 : 7[ca000] -> 8[53000] [send] via NET/AWS Libfabric/1(0)/GDRDMA
+ip-10-0-9-192:1823:1990 [0] NCCL INFO Channel 01/0 : 7[ca000] -> 8[53000] [receive] via NET/AWS Libfabric/1/GDRDMA
+ip-10-0-10-4:107301:107464 [0] NCCL INFO Channel 01/0 : 15[ca000] -> 0[53000] [receive] via NET/AWS Libfabric/1/GDRDMA
+ip-10-0-10-4:107306:107474 [5] NCCL INFO Channel 04/0 : 5[a8000] -> 4[97000] via P2P/IPC
+ip-10-0-10-4:107306:107474 [5] NCCL INFO Channel 05/0 : 5[a8000] -> 4[97000] via P2P/IPC
+ip-10-0-10-4:107306:107474 [5] NCCL INFO Channel 06/0 : 5[a8000] -> 4[97000] via P2P/IPC
+ip-10-0-10-4:107306:107474 [5] NCCL INFO Channel 07/0 : 5[a8000] -> 4[97000] via P2P/IPC
+ip-10-0-9-192:1825:1991 [2] NCCL INFO Channel 04/0 : 10[75000] -> 1[64000] [send] via NET/AWS Libfabric/5(9)/GDRDMA
+ip-10-0-10-4:107303:107475 [2] NCCL INFO Channel 04/0 : 2[75000] -> 9[64000] [send] via NET/AWS Libfabric/5(1)/GDRDMA
+ip-10-0-10-4:107306:107474 [5] NCCL INFO Channel 12/0 : 5[a8000] -> 4[97000] via P2P/IPC
+ip-10-0-10-4:107306:107474 [5] NCCL INFO Channel 13/0 : 5[a8000] -> 4[97000] via P2P/IPC
+ip-10-0-10-4:107305:107473 [4] NCCL INFO Channel 04/0 : 4[97000] -> 3[86000] via P2P/IPC
+ip-10-0-10-4:107306:107474 [5] NCCL INFO Channel 14/0 : 5[a8000] -> 4[97000] via P2P/IPC
+ip-10-0-10-4:107305:107473 [4] NCCL INFO Channel 05/0 : 4[97000] -> 3[86000] via P2P/IPC
+ip-10-0-10-4:107306:107474 [5] NCCL INFO Channel 15/0 : 5[a8000] -> 4[97000] via P2P/IPC
+ip-10-0-10-4:107305:107473 [4] NCCL INFO Channel 06/0 : 4[97000] -> 3[86000] via P2P/IPC
+ip-10-0-10-4:107305:107473 [4] NCCL INFO Channel 07/0 : 4[97000] -> 3[86000] via P2P/IPC
+ip-10-0-9-192:1826:1994 [3] NCCL INFO Channel 04/0 : 11[86000] -> 10[75000] via P2P/IPC
+ip-10-0-9-192:1827:1996 [4] NCCL INFO Channel 04/0 : 12[97000] -> 11[86000] via P2P/IPC
+ip-10-0-10-4:107305:107473 [4] NCCL INFO Channel 12/0 : 4[97000] -> 3[86000] via P2P/IPC
+ip-10-0-9-192:1826:1994 [3] NCCL INFO Channel 05/0 : 11[86000] -> 10[75000] via P2P/IPC
+ip-10-0-10-4:107305:107473 [4] NCCL INFO Channel 13/0 : 4[97000] -> 3[86000] via P2P/IPC
+ip-10-0-9-192:1828:1992 [5] NCCL INFO Channel 04/0 : 13[a8000] -> 12[97000] via P2P/IPC
+ip-10-0-9-192:1827:1996 [4] NCCL INFO Channel 05/0 : 12[97000] -> 11[86000] via P2P/IPC
+ip-10-0-9-192:1826:1994 [3] NCCL INFO Channel 06/0 : 11[86000] -> 10[75000] via P2P/IPC
+ip-10-0-10-4:107305:107473 [4] NCCL INFO Channel 14/0 : 4[97000] -> 3[86000] via P2P/IPC
+ip-10-0-9-192:1827:1996 [4] NCCL INFO Channel 06/0 : 12[97000] -> 11[86000] via P2P/IPC
+ip-10-0-9-192:1828:1992 [5] NCCL INFO Channel 05/0 : 13[a8000] -> 12[97000] via P2P/IPC
+ip-10-0-9-192:1826:1994 [3] NCCL INFO Channel 07/0 : 11[86000] -> 10[75000] via P2P/IPC
+ip-10-0-10-4:107305:107473 [4] NCCL INFO Channel 15/0 : 4[97000] -> 3[86000] via P2P/IPC
+ip-10-0-10-4:107304:107479 [3] NCCL INFO Channel 04/0 : 3[86000] -> 2[75000] via P2P/IPC
+ip-10-0-10-4:107304:107479 [3] NCCL INFO Channel 05/0 : 3[86000] -> 2[75000] via P2P/IPC
+ip-10-0-9-192:1828:1992 [5] NCCL INFO Channel 06/0 : 13[a8000] -> 12[97000] via P2P/IPC
+ip-10-0-9-192:1827:1996 [4] NCCL INFO Channel 07/0 : 12[97000] -> 11[86000] via P2P/IPC
+ip-10-0-9-192:1826:1994 [3] NCCL INFO Channel 12/0 : 11[86000] -> 10[75000] via P2P/IPC
+ip-10-0-10-4:107304:107479 [3] NCCL INFO Channel 06/0 : 3[86000] -> 2[75000] via P2P/IPC
+ip-10-0-9-192:1827:1996 [4] NCCL INFO Channel 12/0 : 12[97000] -> 11[86000] via P2P/IPC
+ip-10-0-10-4:107304:107479 [3] NCCL INFO Channel 07/0 : 3[86000] -> 2[75000] via P2P/IPC
+ip-10-0-9-192:1828:1992 [5] NCCL INFO Channel 07/0 : 13[a8000] -> 12[97000] via P2P/IPC
+ip-10-0-9-192:1826:1994 [3] NCCL INFO Channel 13/0 : 11[86000] -> 10[75000] via P2P/IPC
+ip-10-0-9-192:1828:1992 [5] NCCL INFO Channel 12/0 : 13[a8000] -> 12[97000] via P2P/IPC
+ip-10-0-10-4:107304:107479 [3] NCCL INFO Channel 12/0 : 3[86000] -> 2[75000] via P2P/IPC
+ip-10-0-9-192:1827:1996 [4] NCCL INFO Channel 13/0 : 12[97000] -> 11[86000] via P2P/IPC
+ip-10-0-9-192:1826:1994 [3] NCCL INFO Channel 14/0 : 11[86000] -> 10[75000] via P2P/IPC
+ip-10-0-10-4:107304:107479 [3] NCCL INFO Channel 13/0 : 3[86000] -> 2[75000] via P2P/IPC
+ip-10-0-9-192:1827:1996 [4] NCCL INFO Channel 14/0 : 12[97000] -> 11[86000] via P2P/IPC
+ip-10-0-9-192:1828:1992 [5] NCCL INFO Channel 13/0 : 13[a8000] -> 12[97000] via P2P/IPC
+ip-10-0-10-4:107304:107479 [3] NCCL INFO Channel 14/0 : 3[86000] -> 2[75000] via P2P/IPC
+ip-10-0-9-192:1826:1994 [3] NCCL INFO Channel 15/0 : 11[86000] -> 10[75000] via P2P/IPC
+ip-10-0-10-4:107304:107479 [3] NCCL INFO Channel 15/0 : 3[86000] -> 2[75000] via P2P/IPC
+ip-10-0-9-192:1828:1992 [5] NCCL INFO Channel 14/0 : 13[a8000] -> 12[97000] via P2P/IPC
+ip-10-0-9-192:1827:1996 [4] NCCL INFO Channel 15/0 : 12[97000] -> 11[86000] via P2P/IPC
+ip-10-0-9-192:1828:1992 [5] NCCL INFO Channel 15/0 : 13[a8000] -> 12[97000] via P2P/IPC
+ip-10-0-9-192:1830:1995 [7] NCCL INFO Channel 02/0 : 15[ca000] -> 0[53000] [send] via NET/AWS Libfabric/2(8)/GDRDMA
+ip-10-0-10-4:107308:107478 [7] NCCL INFO Channel 02/0 : 7[ca000] -> 8[53000] [send] via NET/AWS Libfabric/2(0)/GDRDMA
+ip-10-0-9-192:1823:1990 [0] NCCL INFO Channel 02/0 : 7[ca000] -> 8[53000] [receive] via NET/AWS Libfabric/2/GDRDMA
+ip-10-0-10-4:107301:107464 [0] NCCL INFO Channel 02/0 : 15[ca000] -> 0[53000] [receive] via NET/AWS Libfabric/2/GDRDMA
+ip-10-0-10-4:107305:107473 [4] NCCL INFO Connected all rings
+ip-10-0-9-192:1827:1996 [4] NCCL INFO Connected all rings
+ip-10-0-10-4:107305:107473 [4] NCCL INFO Channel 04/0 : 4[97000] -> 5[a8000] via P2P/IPC
+ip-10-0-10-4:107305:107473 [4] NCCL INFO Channel 05/0 : 4[97000] -> 5[a8000] via P2P/IPC
+ip-10-0-10-4:107305:107473 [4] NCCL INFO Channel 06/0 : 4[97000] -> 5[a8000] via P2P/IPC
+ip-10-0-10-4:107305:107473 [4] NCCL INFO Channel 07/0 : 4[97000] -> 5[a8000] via P2P/IPC
+ip-10-0-9-192:1827:1996 [4] NCCL INFO Channel 04/0 : 12[97000] -> 13[a8000] via P2P/IPC
+ip-10-0-10-4:107305:107473 [4] NCCL INFO Channel 12/0 : 4[97000] -> 5[a8000] via P2P/IPC
+ip-10-0-9-192:1827:1996 [4] NCCL INFO Channel 05/0 : 12[97000] -> 13[a8000] via P2P/IPC
+ip-10-0-10-4:107305:107473 [4] NCCL INFO Channel 13/0 : 4[97000] -> 5[a8000] via P2P/IPC
+ip-10-0-9-192:1827:1996 [4] NCCL INFO Channel 06/0 : 12[97000] -> 13[a8000] via P2P/IPC
+ip-10-0-10-4:107305:107473 [4] NCCL INFO Channel 14/0 : 4[97000] -> 5[a8000] via P2P/IPC
+ip-10-0-9-192:1827:1996 [4] NCCL INFO Channel 07/0 : 12[97000] -> 13[a8000] via P2P/IPC
+ip-10-0-9-192:1827:1996 [4] NCCL INFO Channel 12/0 : 12[97000] -> 13[a8000] via P2P/IPC
+ip-10-0-10-4:107305:107473 [4] NCCL INFO Channel 15/0 : 4[97000] -> 5[a8000] via P2P/IPC
+ip-10-0-9-192:1827:1996 [4] NCCL INFO Channel 13/0 : 12[97000] -> 13[a8000] via P2P/IPC
+ip-10-0-9-192:1827:1996 [4] NCCL INFO Channel 14/0 : 12[97000] -> 13[a8000] via P2P/IPC
+ip-10-0-9-192:1827:1996 [4] NCCL INFO Channel 15/0 : 12[97000] -> 13[a8000] via P2P/IPC
+ip-10-0-9-192:1825:1991 [2] NCCL INFO Channel 05/0 : 10[75000] -> 1[64000] [send] via NET/AWS Libfabric/6(9)/GDRDMA
+ip-10-0-10-4:107303:107475 [2] NCCL INFO Channel 05/0 : 2[75000] -> 9[64000] [send] via NET/AWS Libfabric/6(1)/GDRDMA
+ip-10-0-10-4:107308:107478 [7] NCCL INFO Channel 03/0 : 7[ca000] -> 8[53000] [send] via NET/AWS Libfabric/3(0)/GDRDMA
+ip-10-0-9-192:1830:1995 [7] NCCL INFO Channel 03/0 : 15[ca000] -> 0[53000] [send] via NET/AWS Libfabric/3(8)/GDRDMA
+ip-10-0-9-192:1823:1990 [0] NCCL INFO Channel 03/0 : 7[ca000] -> 8[53000] [receive] via NET/AWS Libfabric/3/GDRDMA
+ip-10-0-10-4:107301:107464 [0] NCCL INFO Channel 03/0 : 15[ca000] -> 0[53000] [receive] via NET/AWS Libfabric/3/GDRDMA
+ip-10-0-9-192:1825:1991 [2] NCCL INFO Channel 06/0 : 10[75000] -> 1[64000] [send] via NET/AWS Libfabric/7(9)/GDRDMA
+ip-10-0-10-4:107303:107475 [2] NCCL INFO Channel 06/0 : 2[75000] -> 9[64000] [send] via NET/AWS Libfabric/7(1)/GDRDMA
+ip-10-0-9-192:1823:1990 [0] NCCL INFO Channel 08/0 : 7[ca000] -> 8[53000] [receive] via NET/AWS Libfabric/0/GDRDMA
+ip-10-0-9-192:1830:1995 [7] NCCL INFO Channel 08/0 : 15[ca000] -> 0[53000] [send] via NET/AWS Libfabric/0(8)/GDRDMA
+ip-10-0-10-4:107308:107478 [7] NCCL INFO Channel 08/0 : 7[ca000] -> 8[53000] [send] via NET/AWS Libfabric/0(0)/GDRDMA
+ip-10-0-10-4:107301:107464 [0] NCCL INFO Channel 08/0 : 15[ca000] -> 0[53000] [receive] via NET/AWS Libfabric/0/GDRDMA
+ip-10-0-9-192:1825:1991 [2] NCCL INFO Channel 07/0 : 10[75000] -> 1[64000] [send] via NET/AWS Libfabric/4(9)/GDRDMA
+ip-10-0-10-4:107303:107475 [2] NCCL INFO Channel 07/0 : 2[75000] -> 9[64000] [send] via NET/AWS Libfabric/4(1)/GDRDMA
+ip-10-0-9-192:1823:1990 [0] NCCL INFO Channel 09/0 : 7[ca000] -> 8[53000] [receive] via NET/AWS Libfabric/1/GDRDMA
+ip-10-0-9-192:1830:1995 [7] NCCL INFO Channel 09/0 : 15[ca000] -> 0[53000] [send] via NET/AWS Libfabric/1(8)/GDRDMA
+ip-10-0-10-4:107301:107464 [0] NCCL INFO Channel 09/0 : 15[ca000] -> 0[53000] [receive] via NET/AWS Libfabric/1/GDRDMA
+ip-10-0-10-4:107308:107478 [7] NCCL INFO Channel 09/0 : 7[ca000] -> 8[53000] [send] via NET/AWS Libfabric/1(0)/GDRDMA
+ip-10-0-9-192:1825:1991 [2] NCCL INFO Channel 12/0 : 10[75000] -> 1[64000] [send] via NET/AWS Libfabric/5(9)/GDRDMA
+ip-10-0-10-4:107303:107475 [2] NCCL INFO Channel 12/0 : 2[75000] -> 9[64000] [send] via NET/AWS Libfabric/5(1)/GDRDMA
+ip-10-0-9-192:1830:1995 [7] NCCL INFO Channel 10/0 : 15[ca000] -> 0[53000] [send] via NET/AWS Libfabric/2(8)/GDRDMA
+ip-10-0-10-4:107308:107478 [7] NCCL INFO Channel 10/0 : 7[ca000] -> 8[53000] [send] via NET/AWS Libfabric/2(0)/GDRDMA
+ip-10-0-10-4:107301:107464 [0] NCCL INFO Channel 10/0 : 15[ca000] -> 0[53000] [receive] via NET/AWS Libfabric/2/GDRDMA
+ip-10-0-9-192:1823:1990 [0] NCCL INFO Channel 10/0 : 7[ca000] -> 8[53000] [receive] via NET/AWS Libfabric/2/GDRDMA
+ip-10-0-9-192:1825:1991 [2] NCCL INFO Channel 13/0 : 10[75000] -> 1[64000] [send] via NET/AWS Libfabric/6(9)/GDRDMA
+ip-10-0-10-4:107303:107475 [2] NCCL INFO Channel 13/0 : 2[75000] -> 9[64000] [send] via NET/AWS Libfabric/6(1)/GDRDMA
+ip-10-0-9-192:1830:1995 [7] NCCL INFO Channel 11/0 : 15[ca000] -> 0[53000] [send] via NET/AWS Libfabric/3(8)/GDRDMA
+ip-10-0-10-4:107308:107478 [7] NCCL INFO Channel 11/0 : 7[ca000] -> 8[53000] [send] via NET/AWS Libfabric/3(0)/GDRDMA
+ip-10-0-10-4:107301:107464 [0] NCCL INFO Channel 11/0 : 15[ca000] -> 0[53000] [receive] via NET/AWS Libfabric/3/GDRDMA
+ip-10-0-10-4:107301:107464 [0] NCCL INFO Channel 00/0 : 0[53000] -> 1[64000] via P2P/IPC
+ip-10-0-9-192:1823:1990 [0] NCCL INFO Channel 11/0 : 7[ca000] -> 8[53000] [receive] via NET/AWS Libfabric/3/GDRDMA
+ip-10-0-9-192:1823:1990 [0] NCCL INFO Channel 00/0 : 8[53000] -> 9[64000] via P2P/IPC
+ip-10-0-10-4:107301:107464 [0] NCCL INFO Channel 01/0 : 0[53000] -> 1[64000] via P2P/IPC
+ip-10-0-10-4:107301:107464 [0] NCCL INFO Channel 02/0 : 0[53000] -> 1[64000] via P2P/IPC
+ip-10-0-9-192:1823:1990 [0] NCCL INFO Channel 01/0 : 8[53000] -> 9[64000] via P2P/IPC
+ip-10-0-10-4:107301:107464 [0] NCCL INFO Channel 03/0 : 0[53000] -> 1[64000] via P2P/IPC
+ip-10-0-9-192:1823:1990 [0] NCCL INFO Channel 02/0 : 8[53000] -> 9[64000] via P2P/IPC
+ip-10-0-10-4:107301:107464 [0] NCCL INFO Channel 08/0 : 0[53000] -> 1[64000] via P2P/IPC
+ip-10-0-9-192:1823:1990 [0] NCCL INFO Channel 03/0 : 8[53000] -> 9[64000] via P2P/IPC
+ip-10-0-10-4:107301:107464 [0] NCCL INFO Channel 09/0 : 0[53000] -> 1[64000] via P2P/IPC
+ip-10-0-9-192:1823:1990 [0] NCCL INFO Channel 08/0 : 8[53000] -> 9[64000] via P2P/IPC
+ip-10-0-10-4:107301:107464 [0] NCCL INFO Channel 10/0 : 0[53000] -> 1[64000] via P2P/IPC
+ip-10-0-9-192:1823:1990 [0] NCCL INFO Channel 09/0 : 8[53000] -> 9[64000] via P2P/IPC
+ip-10-0-10-4:107301:107464 [0] NCCL INFO Channel 11/0 : 0[53000] -> 1[64000] via P2P/IPC
+ip-10-0-9-192:1823:1990 [0] NCCL INFO Channel 10/0 : 8[53000] -> 9[64000] via P2P/IPC
+ip-10-0-9-192:1823:1990 [0] NCCL INFO Channel 11/0 : 8[53000] -> 9[64000] via P2P/IPC
+ip-10-0-10-4:107303:107475 [2] NCCL INFO Channel 14/0 : 2[75000] -> 9[64000] [send] via NET/AWS Libfabric/7(1)/GDRDMA
+ip-10-0-9-192:1825:1991 [2] NCCL INFO Channel 14/0 : 10[75000] -> 1[64000] [send] via NET/AWS Libfabric/7(9)/GDRDMA
+ip-10-0-9-192:1829:1997 [6] NCCL INFO Channel 04/0 : 14[b9000] -> 13[a8000] via P2P/IPC
+ip-10-0-9-192:1829:1997 [6] NCCL INFO Channel 05/0 : 14[b9000] -> 13[a8000] via P2P/IPC
+ip-10-0-9-192:1829:1997 [6] NCCL INFO Channel 06/0 : 14[b9000] -> 13[a8000] via P2P/IPC
+ip-10-0-9-192:1829:1997 [6] NCCL INFO Channel 07/0 : 14[b9000] -> 13[a8000] via P2P/IPC
+ip-10-0-9-192:1829:1997 [6] NCCL INFO Channel 12/0 : 14[b9000] -> 13[a8000] via P2P/IPC
+ip-10-0-9-192:1829:1997 [6] NCCL INFO Channel 13/0 : 14[b9000] -> 13[a8000] via P2P/IPC
+ip-10-0-9-192:1829:1997 [6] NCCL INFO Channel 14/0 : 14[b9000] -> 13[a8000] via P2P/IPC
+ip-10-0-9-192:1829:1997 [6] NCCL INFO Channel 15/0 : 14[b9000] -> 13[a8000] via P2P/IPC
+ip-10-0-10-4:107307:107476 [6] NCCL INFO Channel 04/0 : 6[b9000] -> 5[a8000] via P2P/IPC
+ip-10-0-10-4:107307:107476 [6] NCCL INFO Channel 05/0 : 6[b9000] -> 5[a8000] via P2P/IPC
+ip-10-0-10-4:107307:107476 [6] NCCL INFO Channel 06/0 : 6[b9000] -> 5[a8000] via P2P/IPC
+ip-10-0-10-4:107307:107476 [6] NCCL INFO Channel 07/0 : 6[b9000] -> 5[a8000] via P2P/IPC
+ip-10-0-10-4:107307:107476 [6] NCCL INFO Channel 12/0 : 6[b9000] -> 5[a8000] via P2P/IPC
+ip-10-0-10-4:107307:107476 [6] NCCL INFO Channel 13/0 : 6[b9000] -> 5[a8000] via P2P/IPC
+ip-10-0-10-4:107307:107476 [6] NCCL INFO Channel 14/0 : 6[b9000] -> 5[a8000] via P2P/IPC
+ip-10-0-10-4:107307:107476 [6] NCCL INFO Channel 15/0 : 6[b9000] -> 5[a8000] via P2P/IPC
+ip-10-0-9-192:1824:1993 [1] NCCL INFO Channel 04/0 : 2[75000] -> 9[64000] [receive] via NET/AWS Libfabric/5/GDRDMA
+ip-10-0-10-4:107303:107475 [2] NCCL INFO Channel 15/0 : 2[75000] -> 9[64000] [send] via NET/AWS Libfabric/4(1)/GDRDMA
+ip-10-0-9-192:1825:1991 [2] NCCL INFO Channel 15/0 : 10[75000] -> 1[64000] [send] via NET/AWS Libfabric/4(9)/GDRDMA
+ip-10-0-10-4:107302:107477 [1] NCCL INFO Channel 04/0 : 10[75000] -> 1[64000] [receive] via NET/AWS Libfabric/5/GDRDMA
+ip-10-0-9-192:1828:1992 [5] NCCL INFO Connected all rings
+ip-10-0-9-192:1828:1992 [5] NCCL INFO Channel 04/0 : 13[a8000] -> 14[b9000] via P2P/IPC
+ip-10-0-9-192:1828:1992 [5] NCCL INFO Channel 05/0 : 13[a8000] -> 14[b9000] via P2P/IPC
+ip-10-0-9-192:1828:1992 [5] NCCL INFO Channel 06/0 : 13[a8000] -> 14[b9000] via P2P/IPC
+ip-10-0-9-192:1828:1992 [5] NCCL INFO Channel 07/0 : 13[a8000] -> 14[b9000] via P2P/IPC
+ip-10-0-9-192:1828:1992 [5] NCCL INFO Channel 12/0 : 13[a8000] -> 14[b9000] via P2P/IPC
+ip-10-0-9-192:1828:1992 [5] NCCL INFO Channel 13/0 : 13[a8000] -> 14[b9000] via P2P/IPC
+ip-10-0-9-192:1828:1992 [5] NCCL INFO Channel 14/0 : 13[a8000] -> 14[b9000] via P2P/IPC
+ip-10-0-10-4:107306:107474 [5] NCCL INFO Connected all rings
+ip-10-0-9-192:1828:1992 [5] NCCL INFO Channel 15/0 : 13[a8000] -> 14[b9000] via P2P/IPC
+ip-10-0-10-4:107306:107474 [5] NCCL INFO Channel 04/0 : 5[a8000] -> 6[b9000] via P2P/IPC
+ip-10-0-10-4:107306:107474 [5] NCCL INFO Channel 05/0 : 5[a8000] -> 6[b9000] via P2P/IPC
+ip-10-0-10-4:107306:107474 [5] NCCL INFO Channel 06/0 : 5[a8000] -> 6[b9000] via P2P/IPC
+ip-10-0-10-4:107306:107474 [5] NCCL INFO Channel 07/0 : 5[a8000] -> 6[b9000] via P2P/IPC
+ip-10-0-10-4:107306:107474 [5] NCCL INFO Channel 12/0 : 5[a8000] -> 6[b9000] via P2P/IPC
+ip-10-0-10-4:107306:107474 [5] NCCL INFO Channel 13/0 : 5[a8000] -> 6[b9000] via P2P/IPC
+ip-10-0-10-4:107306:107474 [5] NCCL INFO Channel 14/0 : 5[a8000] -> 6[b9000] via P2P/IPC
+ip-10-0-10-4:107306:107474 [5] NCCL INFO Channel 15/0 : 5[a8000] -> 6[b9000] via P2P/IPC
+ip-10-0-9-192:1824:1993 [1] NCCL INFO Channel 05/0 : 2[75000] -> 9[64000] [receive] via NET/AWS Libfabric/6/GDRDMA
+ip-10-0-10-4:107302:107477 [1] NCCL INFO Channel 05/0 : 10[75000] -> 1[64000] [receive] via NET/AWS Libfabric/6/GDRDMA
+ip-10-0-9-192:1824:1993 [1] NCCL INFO Channel 06/0 : 2[75000] -> 9[64000] [receive] via NET/AWS Libfabric/7/GDRDMA
+ip-10-0-10-4:107302:107477 [1] NCCL INFO Channel 06/0 : 10[75000] -> 1[64000] [receive] via NET/AWS Libfabric/7/GDRDMA
+ip-10-0-9-192:1823:1990 [0] NCCL INFO Channel 04/0 : 8[53000] -> 15[ca000] via P2P/IPC
+ip-10-0-9-192:1823:1990 [0] NCCL INFO Channel 05/0 : 8[53000] -> 15[ca000] via P2P/IPC
+ip-10-0-9-192:1823:1990 [0] NCCL INFO Channel 06/0 : 8[53000] -> 15[ca000] via P2P/IPC
+ip-10-0-9-192:1823:1990 [0] NCCL INFO Channel 07/0 : 8[53000] -> 15[ca000] via P2P/IPC
+ip-10-0-10-4:107301:107464 [0] NCCL INFO Channel 04/0 : 0[53000] -> 7[ca000] via P2P/IPC
+ip-10-0-9-192:1823:1990 [0] NCCL INFO Channel 12/0 : 8[53000] -> 15[ca000] via P2P/IPC
+ip-10-0-10-4:107301:107464 [0] NCCL INFO Channel 05/0 : 0[53000] -> 7[ca000] via P2P/IPC
+ip-10-0-10-4:107301:107464 [0] NCCL INFO Channel 06/0 : 0[53000] -> 7[ca000] via P2P/IPC
+ip-10-0-10-4:107301:107464 [0] NCCL INFO Channel 07/0 : 0[53000] -> 7[ca000] via P2P/IPC
+ip-10-0-10-4:107301:107464 [0] NCCL INFO Channel 12/0 : 0[53000] -> 7[ca000] via P2P/IPC
+ip-10-0-10-4:107301:107464 [0] NCCL INFO Channel 13/0 : 0[53000] -> 7[ca000] via P2P/IPC
+ip-10-0-9-192:1823:1990 [0] NCCL INFO Channel 13/0 : 8[53000] -> 15[ca000] via P2P/IPC
+ip-10-0-10-4:107301:107464 [0] NCCL INFO Channel 14/0 : 0[53000] -> 7[ca000] via P2P/IPC
+ip-10-0-10-4:107301:107464 [0] NCCL INFO Channel 15/0 : 0[53000] -> 7[ca000] via P2P/IPC
+ip-10-0-9-192:1824:1993 [1] NCCL INFO Channel 07/0 : 2[75000] -> 9[64000] [receive] via NET/AWS Libfabric/4/GDRDMA
+ip-10-0-9-192:1823:1990 [0] NCCL INFO Channel 14/0 : 8[53000] -> 15[ca000] via P2P/IPC
+ip-10-0-9-192:1823:1990 [0] NCCL INFO Channel 15/0 : 8[53000] -> 15[ca000] via P2P/IPC
+ip-10-0-10-4:107302:107477 [1] NCCL INFO Channel 07/0 : 10[75000] -> 1[64000] [receive] via NET/AWS Libfabric/4/GDRDMA
+ip-10-0-10-4:107308:107478 [7] NCCL INFO Channel 04/0 : 7[ca000] -> 6[b9000] via P2P/IPC
+ip-10-0-10-4:107308:107478 [7] NCCL INFO Channel 05/0 : 7[ca000] -> 6[b9000] via P2P/IPC
+ip-10-0-10-4:107308:107478 [7] NCCL INFO Channel 06/0 : 7[ca000] -> 6[b9000] via P2P/IPC
+ip-10-0-10-4:107308:107478 [7] NCCL INFO Channel 07/0 : 7[ca000] -> 6[b9000] via P2P/IPC
+ip-10-0-10-4:107308:107478 [7] NCCL INFO Channel 12/0 : 7[ca000] -> 6[b9000] via P2P/IPC
+ip-10-0-10-4:107308:107478 [7] NCCL INFO Channel 13/0 : 7[ca000] -> 6[b9000] via P2P/IPC
+ip-10-0-10-4:107308:107478 [7] NCCL INFO Channel 14/0 : 7[ca000] -> 6[b9000] via P2P/IPC
+ip-10-0-9-192:1830:1995 [7] NCCL INFO Channel 04/0 : 15[ca000] -> 14[b9000] via P2P/IPC
+ip-10-0-10-4:107308:107478 [7] NCCL INFO Channel 15/0 : 7[ca000] -> 6[b9000] via P2P/IPC
+ip-10-0-9-192:1830:1995 [7] NCCL INFO Channel 05/0 : 15[ca000] -> 14[b9000] via P2P/IPC
+ip-10-0-9-192:1830:1995 [7] NCCL INFO Channel 06/0 : 15[ca000] -> 14[b9000] via P2P/IPC
+ip-10-0-9-192:1830:1995 [7] NCCL INFO Channel 07/0 : 15[ca000] -> 14[b9000] via P2P/IPC
+ip-10-0-9-192:1830:1995 [7] NCCL INFO Channel 12/0 : 15[ca000] -> 14[b9000] via P2P/IPC
+ip-10-0-9-192:1830:1995 [7] NCCL INFO Channel 13/0 : 15[ca000] -> 14[b9000] via P2P/IPC
+ip-10-0-9-192:1830:1995 [7] NCCL INFO Channel 14/0 : 15[ca000] -> 14[b9000] via P2P/IPC
+ip-10-0-9-192:1830:1995 [7] NCCL INFO Channel 15/0 : 15[ca000] -> 14[b9000] via P2P/IPC
+ip-10-0-10-4:107308:107478 [7] NCCL INFO Connected all rings
+ip-10-0-9-192:1830:1995 [7] NCCL INFO Connected all rings
+ip-10-0-9-192:1824:1993 [1] NCCL INFO Channel 12/0 : 2[75000] -> 9[64000] [receive] via NET/AWS Libfabric/5/GDRDMA
+ip-10-0-10-4:107302:107477 [1] NCCL INFO Channel 12/0 : 10[75000] -> 1[64000] [receive] via NET/AWS Libfabric/5/GDRDMA
+ip-10-0-10-4:107307:107476 [6] NCCL INFO Connected all rings
+ip-10-0-9-192:1829:1997 [6] NCCL INFO Connected all rings
+ip-10-0-10-4:107307:107476 [6] NCCL INFO Channel 04/0 : 6[b9000] -> 7[ca000] via P2P/IPC
+ip-10-0-10-4:107307:107476 [6] NCCL INFO Channel 05/0 : 6[b9000] -> 7[ca000] via P2P/IPC
+ip-10-0-10-4:107307:107476 [6] NCCL INFO Channel 06/0 : 6[b9000] -> 7[ca000] via P2P/IPC
+ip-10-0-10-4:107307:107476 [6] NCCL INFO Channel 07/0 : 6[b9000] -> 7[ca000] via P2P/IPC
+ip-10-0-10-4:107307:107476 [6] NCCL INFO Channel 12/0 : 6[b9000] -> 7[ca000] via P2P/IPC
+ip-10-0-9-192:1829:1997 [6] NCCL INFO Channel 04/0 : 14[b9000] -> 15[ca000] via P2P/IPC
+ip-10-0-10-4:107307:107476 [6] NCCL INFO Channel 13/0 : 6[b9000] -> 7[ca000] via P2P/IPC
+ip-10-0-9-192:1829:1997 [6] NCCL INFO Channel 05/0 : 14[b9000] -> 15[ca000] via P2P/IPC
+ip-10-0-10-4:107307:107476 [6] NCCL INFO Channel 14/0 : 6[b9000] -> 7[ca000] via P2P/IPC
+ip-10-0-9-192:1829:1997 [6] NCCL INFO Channel 06/0 : 14[b9000] -> 15[ca000] via P2P/IPC
+ip-10-0-10-4:107307:107476 [6] NCCL INFO Channel 15/0 : 6[b9000] -> 7[ca000] via P2P/IPC
+ip-10-0-9-192:1829:1997 [6] NCCL INFO Channel 07/0 : 14[b9000] -> 15[ca000] via P2P/IPC
+ip-10-0-9-192:1829:1997 [6] NCCL INFO Channel 12/0 : 14[b9000] -> 15[ca000] via P2P/IPC
+ip-10-0-9-192:1829:1997 [6] NCCL INFO Channel 13/0 : 14[b9000] -> 15[ca000] via P2P/IPC
+ip-10-0-9-192:1829:1997 [6] NCCL INFO Channel 14/0 : 14[b9000] -> 15[ca000] via P2P/IPC
+ip-10-0-9-192:1829:1997 [6] NCCL INFO Channel 15/0 : 14[b9000] -> 15[ca000] via P2P/IPC
+ip-10-0-9-192:1830:1995 [7] NCCL INFO Channel 04/0 : 15[ca000] -> 8[53000] via P2P/IPC
+ip-10-0-10-4:107308:107478 [7] NCCL INFO Channel 04/0 : 7[ca000] -> 0[53000] via P2P/IPC
+ip-10-0-9-192:1824:1993 [1] NCCL INFO Channel 13/0 : 2[75000] -> 9[64000] [receive] via NET/AWS Libfabric/6/GDRDMA
+ip-10-0-9-192:1830:1995 [7] NCCL INFO Channel 05/0 : 15[ca000] -> 8[53000] via P2P/IPC
+ip-10-0-10-4:107308:107478 [7] NCCL INFO Channel 05/0 : 7[ca000] -> 0[53000] via P2P/IPC
+ip-10-0-10-4:107302:107477 [1] NCCL INFO Channel 13/0 : 10[75000] -> 1[64000] [receive] via NET/AWS Libfabric/6/GDRDMA
+ip-10-0-9-192:1830:1995 [7] NCCL INFO Channel 06/0 : 15[ca000] -> 8[53000] via P2P/IPC
+ip-10-0-10-4:107308:107478 [7] NCCL INFO Channel 06/0 : 7[ca000] -> 0[53000] via P2P/IPC
+ip-10-0-9-192:1830:1995 [7] NCCL INFO Channel 07/0 : 15[ca000] -> 8[53000] via P2P/IPC
+ip-10-0-10-4:107308:107478 [7] NCCL INFO Channel 07/0 : 7[ca000] -> 0[53000] via P2P/IPC
+ip-10-0-9-192:1830:1995 [7] NCCL INFO Channel 12/0 : 15[ca000] -> 8[53000] via P2P/IPC
+ip-10-0-10-4:107308:107478 [7] NCCL INFO Channel 12/0 : 7[ca000] -> 0[53000] via P2P/IPC
+ip-10-0-9-192:1830:1995 [7] NCCL INFO Channel 13/0 : 15[ca000] -> 8[53000] via P2P/IPC
+ip-10-0-9-192:1830:1995 [7] NCCL INFO Channel 14/0 : 15[ca000] -> 8[53000] via P2P/IPC
+ip-10-0-9-192:1830:1995 [7] NCCL INFO Channel 15/0 : 15[ca000] -> 8[53000] via P2P/IPC
+ip-10-0-10-4:107308:107478 [7] NCCL INFO Channel 13/0 : 7[ca000] -> 0[53000] via P2P/IPC
+ip-10-0-10-4:107308:107478 [7] NCCL INFO Channel 14/0 : 7[ca000] -> 0[53000] via P2P/IPC
+ip-10-0-10-4:107308:107478 [7] NCCL INFO Channel 15/0 : 7[ca000] -> 0[53000] via P2P/IPC
+ip-10-0-9-192:1828:1992 [5] NCCL INFO Channel 00/0 : 13[a8000] -> 12[97000] via P2P/IPC
+ip-10-0-9-192:1829:1997 [6] NCCL INFO Channel 00/0 : 14[b9000] -> 13[a8000] via P2P/IPC
+ip-10-0-9-192:1828:1992 [5] NCCL INFO Channel 01/0 : 13[a8000] -> 12[97000] via P2P/IPC
+ip-10-0-9-192:1829:1997 [6] NCCL INFO Channel 01/0 : 14[b9000] -> 13[a8000] via P2P/IPC
+ip-10-0-9-192:1828:1992 [5] NCCL INFO Channel 02/0 : 13[a8000] -> 12[97000] via P2P/IPC
+ip-10-0-9-192:1829:1997 [6] NCCL INFO Channel 02/0 : 14[b9000] -> 13[a8000] via P2P/IPC
+ip-10-0-10-4:107306:107474 [5] NCCL INFO Channel 00/0 : 5[a8000] -> 4[97000] via P2P/IPC
+ip-10-0-9-192:1828:1992 [5] NCCL INFO Channel 03/0 : 13[a8000] -> 12[97000] via P2P/IPC
+ip-10-0-10-4:107307:107476 [6] NCCL INFO Channel 00/0 : 6[b9000] -> 5[a8000] via P2P/IPC
+ip-10-0-9-192:1829:1997 [6] NCCL INFO Channel 03/0 : 14[b9000] -> 13[a8000] via P2P/IPC
+ip-10-0-9-192:1828:1992 [5] NCCL INFO Channel 08/0 : 13[a8000] -> 12[97000] via P2P/IPC
+ip-10-0-10-4:107306:107474 [5] NCCL INFO Channel 01/0 : 5[a8000] -> 4[97000] via P2P/IPC
+ip-10-0-9-192:1829:1997 [6] NCCL INFO Channel 08/0 : 14[b9000] -> 13[a8000] via P2P/IPC
+ip-10-0-10-4:107307:107476 [6] NCCL INFO Channel 01/0 : 6[b9000] -> 5[a8000] via P2P/IPC
+ip-10-0-9-192:1828:1992 [5] NCCL INFO Channel 09/0 : 13[a8000] -> 12[97000] via P2P/IPC
+ip-10-0-10-4:107306:107474 [5] NCCL INFO Channel 02/0 : 5[a8000] -> 4[97000] via P2P/IPC
+ip-10-0-9-192:1829:1997 [6] NCCL INFO Channel 09/0 : 14[b9000] -> 13[a8000] via P2P/IPC
+ip-10-0-10-4:107307:107476 [6] NCCL INFO Channel 02/0 : 6[b9000] -> 5[a8000] via P2P/IPC
+ip-10-0-9-192:1828:1992 [5] NCCL INFO Channel 10/0 : 13[a8000] -> 12[97000] via P2P/IPC
+ip-10-0-10-4:107306:107474 [5] NCCL INFO Channel 03/0 : 5[a8000] -> 4[97000] via P2P/IPC
+ip-10-0-9-192:1829:1997 [6] NCCL INFO Channel 10/0 : 14[b9000] -> 13[a8000] via P2P/IPC
+ip-10-0-10-4:107307:107476 [6] NCCL INFO Channel 03/0 : 6[b9000] -> 5[a8000] via P2P/IPC
+ip-10-0-9-192:1828:1992 [5] NCCL INFO Channel 11/0 : 13[a8000] -> 12[97000] via P2P/IPC
+ip-10-0-10-4:107306:107474 [5] NCCL INFO Channel 08/0 : 5[a8000] -> 4[97000] via P2P/IPC
+ip-10-0-9-192:1829:1997 [6] NCCL INFO Channel 11/0 : 14[b9000] -> 13[a8000] via P2P/IPC
+ip-10-0-10-4:107307:107476 [6] NCCL INFO Channel 08/0 : 6[b9000] -> 5[a8000] via P2P/IPC
+ip-10-0-10-4:107306:107474 [5] NCCL INFO Channel 09/0 : 5[a8000] -> 4[97000] via P2P/IPC
+ip-10-0-10-4:107307:107476 [6] NCCL INFO Channel 09/0 : 6[b9000] -> 5[a8000] via P2P/IPC
+ip-10-0-10-4:107306:107474 [5] NCCL INFO Channel 10/0 : 5[a8000] -> 4[97000] via P2P/IPC
+ip-10-0-10-4:107307:107476 [6] NCCL INFO Channel 10/0 : 6[b9000] -> 5[a8000] via P2P/IPC
+ip-10-0-10-4:107306:107474 [5] NCCL INFO Channel 11/0 : 5[a8000] -> 4[97000] via P2P/IPC
+ip-10-0-10-4:107307:107476 [6] NCCL INFO Channel 11/0 : 6[b9000] -> 5[a8000] via P2P/IPC
+ip-10-0-9-192:1824:1993 [1] NCCL INFO Channel 14/0 : 2[75000] -> 9[64000] [receive] via NET/AWS Libfabric/7/GDRDMA
+ip-10-0-10-4:107302:107477 [1] NCCL INFO Channel 14/0 : 10[75000] -> 1[64000] [receive] via NET/AWS Libfabric/7/GDRDMA
+ip-10-0-9-192:1824:1993 [1] NCCL INFO Channel 15/0 : 2[75000] -> 9[64000] [receive] via NET/AWS Libfabric/4/GDRDMA
+ip-10-0-10-4:107302:107477 [1] NCCL INFO Channel 15/0 : 10[75000] -> 1[64000] [receive] via NET/AWS Libfabric/4/GDRDMA
+ip-10-0-9-192:1824:1993 [1] NCCL INFO Channel 04/0 : 9[64000] -> 8[53000] via P2P/IPC
+ip-10-0-9-192:1824:1993 [1] NCCL INFO Channel 05/0 : 9[64000] -> 8[53000] via P2P/IPC
+ip-10-0-9-192:1824:1993 [1] NCCL INFO Channel 06/0 : 9[64000] -> 8[53000] via P2P/IPC
+ip-10-0-9-192:1824:1993 [1] NCCL INFO Channel 07/0 : 9[64000] -> 8[53000] via P2P/IPC
+ip-10-0-9-192:1824:1993 [1] NCCL INFO Channel 12/0 : 9[64000] -> 8[53000] via P2P/IPC
+ip-10-0-9-192:1824:1993 [1] NCCL INFO Channel 13/0 : 9[64000] -> 8[53000] via P2P/IPC
+ip-10-0-9-192:1824:1993 [1] NCCL INFO Channel 14/0 : 9[64000] -> 8[53000] via P2P/IPC
+ip-10-0-9-192:1824:1993 [1] NCCL INFO Channel 15/0 : 9[64000] -> 8[53000] via P2P/IPC
+ip-10-0-10-4:107303:107475 [2] NCCL INFO Connected all rings
+ip-10-0-10-4:107302:107477 [1] NCCL INFO Channel 04/0 : 1[64000] -> 0[53000] via P2P/IPC
+ip-10-0-9-192:1824:1993 [1] NCCL INFO Connected all rings
+ip-10-0-9-192:1824:1993 [1] NCCL INFO Channel 04/0 : 9[64000] -> 10[75000] via P2P/IPC
+ip-10-0-9-192:1823:1990 [0] NCCL INFO Connected all rings
+ip-10-0-10-4:107302:107477 [1] NCCL INFO Channel 05/0 : 1[64000] -> 0[53000] via P2P/IPC
+ip-10-0-9-192:1823:1990 [0] NCCL INFO Channel 00/0 : 0[53000] -> 8[53000] [receive] via NET/AWS Libfabric/0/GDRDMA
+ip-10-0-9-192:1824:1993 [1] NCCL INFO Channel 05/0 : 9[64000] -> 10[75000] via P2P/IPC
+ip-10-0-9-192:1824:1993 [1] NCCL INFO Channel 06/0 : 9[64000] -> 10[75000] via P2P/IPC
+ip-10-0-9-192:1824:1993 [1] NCCL INFO Channel 07/0 : 9[64000] -> 10[75000] via P2P/IPC
+ip-10-0-9-192:1824:1993 [1] NCCL INFO Channel 12/0 : 9[64000] -> 10[75000] via P2P/IPC
+ip-10-0-9-192:1824:1993 [1] NCCL INFO Channel 13/0 : 9[64000] -> 10[75000] via P2P/IPC
+ip-10-0-9-192:1824:1993 [1] NCCL INFO Channel 14/0 : 9[64000] -> 10[75000] via P2P/IPC
+ip-10-0-10-4:107302:107477 [1] NCCL INFO Channel 06/0 : 1[64000] -> 0[53000] via P2P/IPC
+ip-10-0-9-192:1824:1993 [1] NCCL INFO Channel 15/0 : 9[64000] -> 10[75000] via P2P/IPC
+ip-10-0-10-4:107302:107477 [1] NCCL INFO Channel 07/0 : 1[64000] -> 0[53000] via P2P/IPC
+ip-10-0-10-4:107302:107477 [1] NCCL INFO Channel 12/0 : 1[64000] -> 0[53000] via P2P/IPC
+ip-10-0-10-4:107304:107479 [3] NCCL INFO Connected all rings
+ip-10-0-10-4:107302:107477 [1] NCCL INFO Channel 13/0 : 1[64000] -> 0[53000] via P2P/IPC
+ip-10-0-10-4:107302:107477 [1] NCCL INFO Channel 14/0 : 1[64000] -> 0[53000] via P2P/IPC
+ip-10-0-10-4:107302:107477 [1] NCCL INFO Channel 15/0 : 1[64000] -> 0[53000] via P2P/IPC
+ip-10-0-10-4:107303:107475 [2] NCCL INFO Channel 04/0 : 2[75000] -> 3[86000] via P2P/IPC
+ip-10-0-10-4:107303:107475 [2] NCCL INFO Channel 05/0 : 2[75000] -> 3[86000] via P2P/IPC
+ip-10-0-10-4:107303:107475 [2] NCCL INFO Channel 06/0 : 2[75000] -> 3[86000] via P2P/IPC
+ip-10-0-10-4:107303:107475 [2] NCCL INFO Channel 07/0 : 2[75000] -> 3[86000] via P2P/IPC
+ip-10-0-9-192:1825:1991 [2] NCCL INFO Connected all rings
+ip-10-0-10-4:107303:107475 [2] NCCL INFO Channel 12/0 : 2[75000] -> 3[86000] via P2P/IPC
+ip-10-0-10-4:107303:107475 [2] NCCL INFO Channel 13/0 : 2[75000] -> 3[86000] via P2P/IPC
+ip-10-0-10-4:107302:107477 [1] NCCL INFO Connected all rings
+ip-10-0-10-4:107302:107477 [1] NCCL INFO Channel 04/0 : 1[64000] -> 2[75000] via P2P/IPC
+ip-10-0-10-4:107301:107464 [0] NCCL INFO Connected all rings
+ip-10-0-10-4:107301:107464 [0] NCCL INFO Channel 00/0 : 8[53000] -> 0[53000] [receive] via NET/AWS Libfabric/0/GDRDMA
+ip-10-0-10-4:107303:107475 [2] NCCL INFO Channel 14/0 : 2[75000] -> 3[86000] via P2P/IPC
+ip-10-0-10-4:107304:107479 [3] NCCL INFO Channel 04/0 : 3[86000] -> 4[97000] via P2P/IPC
+ip-10-0-10-4:107302:107477 [1] NCCL INFO Channel 05/0 : 1[64000] -> 2[75000] via P2P/IPC
+ip-10-0-10-4:107304:107479 [3] NCCL INFO Channel 05/0 : 3[86000] -> 4[97000] via P2P/IPC
+ip-10-0-10-4:107303:107475 [2] NCCL INFO Channel 15/0 : 2[75000] -> 3[86000] via P2P/IPC
+ip-10-0-10-4:107302:107477 [1] NCCL INFO Channel 06/0 : 1[64000] -> 2[75000] via P2P/IPC
+ip-10-0-10-4:107304:107479 [3] NCCL INFO Channel 06/0 : 3[86000] -> 4[97000] via P2P/IPC
+ip-10-0-10-4:107302:107477 [1] NCCL INFO Channel 07/0 : 1[64000] -> 2[75000] via P2P/IPC
+ip-10-0-10-4:107304:107479 [3] NCCL INFO Channel 07/0 : 3[86000] -> 4[97000] via P2P/IPC
+ip-10-0-10-4:107302:107477 [1] NCCL INFO Channel 12/0 : 1[64000] -> 2[75000] via P2P/IPC
+ip-10-0-10-4:107304:107479 [3] NCCL INFO Channel 12/0 : 3[86000] -> 4[97000] via P2P/IPC
+ip-10-0-10-4:107302:107477 [1] NCCL INFO Channel 13/0 : 1[64000] -> 2[75000] via P2P/IPC
+ip-10-0-9-192:1826:1994 [3] NCCL INFO Connected all rings
+ip-10-0-10-4:107304:107479 [3] NCCL INFO Channel 13/0 : 3[86000] -> 4[97000] via P2P/IPC
+ip-10-0-10-4:107302:107477 [1] NCCL INFO Channel 14/0 : 1[64000] -> 2[75000] via P2P/IPC
+ip-10-0-10-4:107304:107479 [3] NCCL INFO Channel 14/0 : 3[86000] -> 4[97000] via P2P/IPC
+ip-10-0-10-4:107302:107477 [1] NCCL INFO Channel 15/0 : 1[64000] -> 2[75000] via P2P/IPC
+ip-10-0-10-4:107304:107479 [3] NCCL INFO Channel 15/0 : 3[86000] -> 4[97000] via P2P/IPC
+ip-10-0-9-192:1825:1991 [2] NCCL INFO Channel 04/0 : 10[75000] -> 11[86000] via P2P/IPC
+ip-10-0-9-192:1825:1991 [2] NCCL INFO Channel 05/0 : 10[75000] -> 11[86000] via P2P/IPC
+ip-10-0-9-192:1825:1991 [2] NCCL INFO Channel 06/0 : 10[75000] -> 11[86000] via P2P/IPC
+ip-10-0-9-192:1825:1991 [2] NCCL INFO Channel 07/0 : 10[75000] -> 11[86000] via P2P/IPC
+ip-10-0-9-192:1825:1991 [2] NCCL INFO Channel 12/0 : 10[75000] -> 11[86000] via P2P/IPC
+ip-10-0-9-192:1825:1991 [2] NCCL INFO Channel 13/0 : 10[75000] -> 11[86000] via P2P/IPC
+ip-10-0-9-192:1826:1994 [3] NCCL INFO Channel 04/0 : 11[86000] -> 12[97000] via P2P/IPC
+ip-10-0-9-192:1825:1991 [2] NCCL INFO Channel 14/0 : 10[75000] -> 11[86000] via P2P/IPC
+ip-10-0-9-192:1826:1994 [3] NCCL INFO Channel 05/0 : 11[86000] -> 12[97000] via P2P/IPC
+ip-10-0-9-192:1825:1991 [2] NCCL INFO Channel 15/0 : 10[75000] -> 11[86000] via P2P/IPC
+ip-10-0-9-192:1826:1994 [3] NCCL INFO Channel 06/0 : 11[86000] -> 12[97000] via P2P/IPC
+ip-10-0-9-192:1826:1994 [3] NCCL INFO Channel 07/0 : 11[86000] -> 12[97000] via P2P/IPC
+ip-10-0-9-192:1826:1994 [3] NCCL INFO Channel 12/0 : 11[86000] -> 12[97000] via P2P/IPC
+ip-10-0-9-192:1826:1994 [3] NCCL INFO Channel 13/0 : 11[86000] -> 12[97000] via P2P/IPC
+ip-10-0-9-192:1826:1994 [3] NCCL INFO Channel 14/0 : 11[86000] -> 12[97000] via P2P/IPC
+ip-10-0-9-192:1826:1994 [3] NCCL INFO Channel 15/0 : 11[86000] -> 12[97000] via P2P/IPC
+ip-10-0-9-192:1823:1990 [0] NCCL INFO Channel 01/0 : 0[53000] -> 8[53000] [receive] via NET/AWS Libfabric/1/GDRDMA
+ip-10-0-9-192:1824:1993 [1] NCCL INFO Channel 04/0 : 1[64000] -> 9[64000] [receive] via NET/AWS Libfabric/5/GDRDMA
+ip-10-0-10-4:107301:107464 [0] NCCL INFO Channel 01/0 : 8[53000] -> 0[53000] [receive] via NET/AWS Libfabric/1/GDRDMA
+ip-10-0-9-192:1823:1990 [0] NCCL INFO Channel 02/0 : 0[53000] -> 8[53000] [receive] via NET/AWS Libfabric/2/GDRDMA
+ip-10-0-9-192:1824:1993 [1] NCCL INFO Channel 05/0 : 1[64000] -> 9[64000] [receive] via NET/AWS Libfabric/6/GDRDMA
+ip-10-0-9-192:1825:1991 [2] NCCL INFO Channel 00/0 : 10[75000] -> 9[64000] via P2P/IPC
+ip-10-0-9-192:1825:1991 [2] NCCL INFO Channel 01/0 : 10[75000] -> 9[64000] via P2P/IPC
+ip-10-0-9-192:1827:1996 [4] NCCL INFO Channel 00/0 : 12[97000] -> 11[86000] via P2P/IPC
+ip-10-0-9-192:1826:1994 [3] NCCL INFO Channel 00/0 : 11[86000] -> 10[75000] via P2P/IPC
+ip-10-0-9-192:1825:1991 [2] NCCL INFO Channel 02/0 : 10[75000] -> 9[64000] via P2P/IPC
+ip-10-0-9-192:1827:1996 [4] NCCL INFO Channel 01/0 : 12[97000] -> 11[86000] via P2P/IPC
+ip-10-0-9-192:1826:1994 [3] NCCL INFO Channel 01/0 : 11[86000] -> 10[75000] via P2P/IPC
+ip-10-0-9-192:1825:1991 [2] NCCL INFO Channel 03/0 : 10[75000] -> 9[64000] via P2P/IPC
+ip-10-0-9-192:1826:1994 [3] NCCL INFO Channel 02/0 : 11[86000] -> 10[75000] via P2P/IPC
+ip-10-0-9-192:1827:1996 [4] NCCL INFO Channel 02/0 : 12[97000] -> 11[86000] via P2P/IPC
+ip-10-0-9-192:1825:1991 [2] NCCL INFO Channel 04/0 : 10[75000] -> 9[64000] via P2P/IPC
+ip-10-0-9-192:1827:1996 [4] NCCL INFO Channel 03/0 : 12[97000] -> 11[86000] via P2P/IPC
+ip-10-0-9-192:1826:1994 [3] NCCL INFO Channel 03/0 : 11[86000] -> 10[75000] via P2P/IPC
+ip-10-0-9-192:1825:1991 [2] NCCL INFO Channel 05/0 : 10[75000] -> 9[64000] via P2P/IPC
+ip-10-0-9-192:1827:1996 [4] NCCL INFO Channel 08/0 : 12[97000] -> 11[86000] via P2P/IPC
+ip-10-0-9-192:1826:1994 [3] NCCL INFO Channel 08/0 : 11[86000] -> 10[75000] via P2P/IPC
+ip-10-0-9-192:1825:1991 [2] NCCL INFO Channel 06/0 : 10[75000] -> 9[64000] via P2P/IPC
+ip-10-0-10-4:107303:107475 [2] NCCL INFO Channel 00/0 : 2[75000] -> 1[64000] via P2P/IPC
+ip-10-0-10-4:107304:107479 [3] NCCL INFO Channel 00/0 : 3[86000] -> 2[75000] via P2P/IPC
+ip-10-0-9-192:1827:1996 [4] NCCL INFO Channel 09/0 : 12[97000] -> 11[86000] via P2P/IPC
+ip-10-0-9-192:1826:1994 [3] NCCL INFO Channel 09/0 : 11[86000] -> 10[75000] via P2P/IPC
+ip-10-0-10-4:107305:107473 [4] NCCL INFO Channel 00/0 : 4[97000] -> 3[86000] via P2P/IPC
+ip-10-0-9-192:1825:1991 [2] NCCL INFO Channel 07/0 : 10[75000] -> 9[64000] via P2P/IPC
+ip-10-0-10-4:107303:107475 [2] NCCL INFO Channel 01/0 : 2[75000] -> 1[64000] via P2P/IPC
+ip-10-0-10-4:107304:107479 [3] NCCL INFO Channel 01/0 : 3[86000] -> 2[75000] via P2P/IPC
+ip-10-0-9-192:1827:1996 [4] NCCL INFO Channel 10/0 : 12[97000] -> 11[86000] via P2P/IPC
+ip-10-0-9-192:1826:1994 [3] NCCL INFO Channel 10/0 : 11[86000] -> 10[75000] via P2P/IPC
+ip-10-0-9-192:1825:1991 [2] NCCL INFO Channel 08/0 : 10[75000] -> 9[64000] via P2P/IPC
+ip-10-0-10-4:107305:107473 [4] NCCL INFO Channel 01/0 : 4[97000] -> 3[86000] via P2P/IPC
+ip-10-0-10-4:107303:107475 [2] NCCL INFO Channel 02/0 : 2[75000] -> 1[64000] via P2P/IPC
+ip-10-0-10-4:107304:107479 [3] NCCL INFO Channel 02/0 : 3[86000] -> 2[75000] via P2P/IPC
+ip-10-0-9-192:1827:1996 [4] NCCL INFO Channel 11/0 : 12[97000] -> 11[86000] via P2P/IPC
+ip-10-0-9-192:1826:1994 [3] NCCL INFO Channel 11/0 : 11[86000] -> 10[75000] via P2P/IPC
+ip-10-0-9-192:1825:1991 [2] NCCL INFO Channel 09/0 : 10[75000] -> 9[64000] via P2P/IPC
+ip-10-0-10-4:107303:107475 [2] NCCL INFO Channel 03/0 : 2[75000] -> 1[64000] via P2P/IPC
+ip-10-0-10-4:107305:107473 [4] NCCL INFO Channel 02/0 : 4[97000] -> 3[86000] via P2P/IPC
+ip-10-0-10-4:107304:107479 [3] NCCL INFO Channel 03/0 : 3[86000] -> 2[75000] via P2P/IPC
+ip-10-0-9-192:1825:1991 [2] NCCL INFO Channel 10/0 : 10[75000] -> 9[64000] via P2P/IPC
+ip-10-0-10-4:107305:107473 [4] NCCL INFO Channel 03/0 : 4[97000] -> 3[86000] via P2P/IPC
+ip-10-0-10-4:107303:107475 [2] NCCL INFO Channel 04/0 : 2[75000] -> 1[64000] via P2P/IPC
+ip-10-0-10-4:107304:107479 [3] NCCL INFO Channel 08/0 : 3[86000] -> 2[75000] via P2P/IPC
+ip-10-0-10-4:107305:107473 [4] NCCL INFO Channel 08/0 : 4[97000] -> 3[86000] via P2P/IPC
+ip-10-0-10-4:107303:107475 [2] NCCL INFO Channel 05/0 : 2[75000] -> 1[64000] via P2P/IPC
+ip-10-0-10-4:107304:107479 [3] NCCL INFO Channel 09/0 : 3[86000] -> 2[75000] via P2P/IPC
+ip-10-0-10-4:107305:107473 [4] NCCL INFO Channel 09/0 : 4[97000] -> 3[86000] via P2P/IPC
+ip-10-0-10-4:107303:107475 [2] NCCL INFO Channel 06/0 : 2[75000] -> 1[64000] via P2P/IPC
+ip-10-0-10-4:107304:107479 [3] NCCL INFO Channel 10/0 : 3[86000] -> 2[75000] via P2P/IPC
+ip-10-0-10-4:107305:107473 [4] NCCL INFO Channel 10/0 : 4[97000] -> 3[86000] via P2P/IPC
+ip-10-0-10-4:107303:107475 [2] NCCL INFO Channel 07/0 : 2[75000] -> 1[64000] via P2P/IPC
+ip-10-0-10-4:107304:107479 [3] NCCL INFO Channel 11/0 : 3[86000] -> 2[75000] via P2P/IPC
+ip-10-0-10-4:107305:107473 [4] NCCL INFO Channel 11/0 : 4[97000] -> 3[86000] via P2P/IPC
+ip-10-0-10-4:107303:107475 [2] NCCL INFO Channel 08/0 : 2[75000] -> 1[64000] via P2P/IPC
+ip-10-0-10-4:107303:107475 [2] NCCL INFO Channel 09/0 : 2[75000] -> 1[64000] via P2P/IPC
+ip-10-0-9-192:1825:1991 [2] NCCL INFO Channel 11/0 : 10[75000] -> 9[64000] via P2P/IPC
+ip-10-0-10-4:107303:107475 [2] NCCL INFO Channel 10/0 : 2[75000] -> 1[64000] via P2P/IPC
+ip-10-0-10-4:107302:107477 [1] NCCL INFO Channel 04/0 : 9[64000] -> 1[64000] [receive] via NET/AWS Libfabric/5/GDRDMA
+ip-10-0-9-192:1825:1991 [2] NCCL INFO Channel 12/0 : 10[75000] -> 9[64000] via P2P/IPC
+ip-10-0-10-4:107303:107475 [2] NCCL INFO Channel 11/0 : 2[75000] -> 1[64000] via P2P/IPC
+ip-10-0-10-4:107301:107464 [0] NCCL INFO Channel 02/0 : 8[53000] -> 0[53000] [receive] via NET/AWS Libfabric/2/GDRDMA
+ip-10-0-9-192:1825:1991 [2] NCCL INFO Channel 13/0 : 10[75000] -> 9[64000] via P2P/IPC
+ip-10-0-10-4:107303:107475 [2] NCCL INFO Channel 12/0 : 2[75000] -> 1[64000] via P2P/IPC
+ip-10-0-9-192:1825:1991 [2] NCCL INFO Channel 14/0 : 10[75000] -> 9[64000] via P2P/IPC
+ip-10-0-10-4:107303:107475 [2] NCCL INFO Channel 13/0 : 2[75000] -> 1[64000] via P2P/IPC
+ip-10-0-10-4:107303:107475 [2] NCCL INFO Channel 14/0 : 2[75000] -> 1[64000] via P2P/IPC
+ip-10-0-9-192:1825:1991 [2] NCCL INFO Channel 15/0 : 10[75000] -> 9[64000] via P2P/IPC
+ip-10-0-9-192:1823:1990 [0] NCCL INFO Channel 03/0 : 0[53000] -> 8[53000] [receive] via NET/AWS Libfabric/3/GDRDMA
+ip-10-0-10-4:107303:107475 [2] NCCL INFO Channel 15/0 : 2[75000] -> 1[64000] via P2P/IPC
+ip-10-0-9-192:1824:1993 [1] NCCL INFO Channel 06/0 : 1[64000] -> 9[64000] [receive] via NET/AWS Libfabric/7/GDRDMA
+ip-10-0-10-4:107306:107474 [5] NCCL INFO Connected all trees
+ip-10-0-10-4:107306:107474 [5] NCCL INFO threadThresholds 8/8/64 | 128/8/64 | 512 | 512
+ip-10-0-10-4:107306:107474 [5] NCCL INFO 16 coll channels, 16 p2p channels, 2 p2p channels per peer
+ip-10-0-10-4:107305:107473 [4] NCCL INFO Connected all trees
+ip-10-0-10-4:107305:107473 [4] NCCL INFO threadThresholds 8/8/64 | 128/8/64 | 512 | 512
+ip-10-0-10-4:107305:107473 [4] NCCL INFO 16 coll channels, 16 p2p channels, 2 p2p channels per peer
+ip-10-0-9-192:1828:1992 [5] NCCL INFO Connected all trees
+ip-10-0-9-192:1828:1992 [5] NCCL INFO threadThresholds 8/8/64 | 128/8/64 | 512 | 512
+ip-10-0-9-192:1828:1992 [5] NCCL INFO 16 coll channels, 16 p2p channels, 2 p2p channels per peer
+ip-10-0-9-192:1827:1996 [4] NCCL INFO Connected all trees
+ip-10-0-9-192:1827:1996 [4] NCCL INFO threadThresholds 8/8/64 | 128/8/64 | 512 | 512
+ip-10-0-9-192:1827:1996 [4] NCCL INFO 16 coll channels, 16 p2p channels, 2 p2p channels per peer
+ip-10-0-10-4:107301:107464 [0] NCCL INFO Channel 03/0 : 8[53000] -> 0[53000] [receive] via NET/AWS Libfabric/3/GDRDMA
+ip-10-0-10-4:107302:107477 [1] NCCL INFO Channel 05/0 : 9[64000] -> 1[64000] [receive] via NET/AWS Libfabric/6/GDRDMA
+ip-10-0-10-4:107304:107479 [3] NCCL INFO Connected all trees
+ip-10-0-10-4:107304:107479 [3] NCCL INFO threadThresholds 8/8/64 | 128/8/64 | 512 | 512
+ip-10-0-10-4:107304:107479 [3] NCCL INFO 16 coll channels, 16 p2p channels, 2 p2p channels per peer
+ip-10-0-9-192:1826:1994 [3] NCCL INFO Connected all trees
+ip-10-0-9-192:1826:1994 [3] NCCL INFO threadThresholds 8/8/64 | 128/8/64 | 512 | 512
+ip-10-0-9-192:1826:1994 [3] NCCL INFO 16 coll channels, 16 p2p channels, 2 p2p channels per peer
+ip-10-0-9-192:1823:1990 [0] NCCL INFO Channel 08/0 : 0[53000] -> 8[53000] [receive] via NET/AWS Libfabric/0/GDRDMA
+ip-10-0-9-192:1824:1993 [1] NCCL INFO Channel 07/0 : 1[64000] -> 9[64000] [receive] via NET/AWS Libfabric/4/GDRDMA
+ip-10-0-10-4:107301:107464 [0] NCCL INFO Channel 08/0 : 8[53000] -> 0[53000] [receive] via NET/AWS Libfabric/0/GDRDMA
+ip-10-0-10-4:107302:107477 [1] NCCL INFO Channel 06/0 : 9[64000] -> 1[64000] [receive] via NET/AWS Libfabric/7/GDRDMA
+ip-10-0-9-192:1823:1990 [0] NCCL INFO Channel 09/0 : 0[53000] -> 8[53000] [receive] via NET/AWS Libfabric/1/GDRDMA
+ip-10-0-9-192:1824:1993 [1] NCCL INFO Channel 12/0 : 1[64000] -> 9[64000] [receive] via NET/AWS Libfabric/5/GDRDMA
+ip-10-0-10-4:107301:107464 [0] NCCL INFO Channel 09/0 : 8[53000] -> 0[53000] [receive] via NET/AWS Libfabric/1/GDRDMA
+ip-10-0-10-4:107302:107477 [1] NCCL INFO Channel 07/0 : 9[64000] -> 1[64000] [receive] via NET/AWS Libfabric/4/GDRDMA
+ip-10-0-9-192:1823:1990 [0] NCCL INFO Channel 10/0 : 0[53000] -> 8[53000] [receive] via NET/AWS Libfabric/2/GDRDMA
+ip-10-0-9-192:1824:1993 [1] NCCL INFO Channel 13/0 : 1[64000] -> 9[64000] [receive] via NET/AWS Libfabric/6/GDRDMA
+ip-10-0-10-4:107301:107464 [0] NCCL INFO Channel 10/0 : 8[53000] -> 0[53000] [receive] via NET/AWS Libfabric/2/GDRDMA
+ip-10-0-10-4:107302:107477 [1] NCCL INFO Channel 12/0 : 9[64000] -> 1[64000] [receive] via NET/AWS Libfabric/5/GDRDMA
+ip-10-0-9-192:1823:1990 [0] NCCL INFO Channel 11/0 : 0[53000] -> 8[53000] [receive] via NET/AWS Libfabric/3/GDRDMA
+ip-10-0-9-192:1824:1993 [1] NCCL INFO Channel 14/0 : 1[64000] -> 9[64000] [receive] via NET/AWS Libfabric/7/GDRDMA
+ip-10-0-10-4:107301:107464 [0] NCCL INFO Channel 11/0 : 8[53000] -> 0[53000] [receive] via NET/AWS Libfabric/3/GDRDMA
+ip-10-0-10-4:107302:107477 [1] NCCL INFO Channel 13/0 : 9[64000] -> 1[64000] [receive] via NET/AWS Libfabric/6/GDRDMA
+ip-10-0-9-192:1823:1990 [0] NCCL INFO Channel 00/0 : 8[53000] -> 0[53000] [send] via NET/AWS Libfabric/0/GDRDMA
+ip-10-0-9-192:1824:1993 [1] NCCL INFO Channel 15/0 : 1[64000] -> 9[64000] [receive] via NET/AWS Libfabric/4/GDRDMA
+ip-10-0-10-4:107301:107464 [0] NCCL INFO Channel 00/0 : 0[53000] -> 8[53000] [send] via NET/AWS Libfabric/0/GDRDMA
+ip-10-0-10-4:107302:107477 [1] NCCL INFO Channel 14/0 : 9[64000] -> 1[64000] [receive] via NET/AWS Libfabric/7/GDRDMA
+ip-10-0-9-192:1823:1990 [0] NCCL INFO Channel 01/0 : 8[53000] -> 0[53000] [send] via NET/AWS Libfabric/1/GDRDMA
+ip-10-0-9-192:1824:1993 [1] NCCL INFO Channel 04/0 : 9[64000] -> 1[64000] [send] via NET/AWS Libfabric/5/GDRDMA
+ip-10-0-10-4:107301:107464 [0] NCCL INFO Channel 01/0 : 0[53000] -> 8[53000] [send] via NET/AWS Libfabric/1/GDRDMA
+ip-10-0-10-4:107302:107477 [1] NCCL INFO Channel 15/0 : 9[64000] -> 1[64000] [receive] via NET/AWS Libfabric/4/GDRDMA
+ip-10-0-9-192:1823:1990 [0] NCCL INFO Channel 02/0 : 8[53000] -> 0[53000] [send] via NET/AWS Libfabric/2/GDRDMA
+ip-10-0-9-192:1824:1993 [1] NCCL INFO Channel 05/0 : 9[64000] -> 1[64000] [send] via NET/AWS Libfabric/6/GDRDMA
+ip-10-0-10-4:107301:107464 [0] NCCL INFO Channel 02/0 : 0[53000] -> 8[53000] [send] via NET/AWS Libfabric/2/GDRDMA
+ip-10-0-9-192:1823:1990 [0] NCCL INFO Channel 03/0 : 8[53000] -> 0[53000] [send] via NET/AWS Libfabric/3/GDRDMA
+ip-10-0-10-4:107302:107477 [1] NCCL INFO Channel 04/0 : 1[64000] -> 9[64000] [send] via NET/AWS Libfabric/5/GDRDMA
+ip-10-0-9-192:1824:1993 [1] NCCL INFO Channel 06/0 : 9[64000] -> 1[64000] [send] via NET/AWS Libfabric/7/GDRDMA
+ip-10-0-10-4:107301:107464 [0] NCCL INFO Channel 03/0 : 0[53000] -> 8[53000] [send] via NET/AWS Libfabric/3/GDRDMA
+ip-10-0-9-192:1823:1990 [0] NCCL INFO Channel 08/0 : 8[53000] -> 0[53000] [send] via NET/AWS Libfabric/0/GDRDMA
+ip-10-0-10-4:107302:107477 [1] NCCL INFO Channel 05/0 : 1[64000] -> 9[64000] [send] via NET/AWS Libfabric/6/GDRDMA
+ip-10-0-9-192:1824:1993 [1] NCCL INFO Channel 07/0 : 9[64000] -> 1[64000] [send] via NET/AWS Libfabric/4/GDRDMA
+ip-10-0-10-4:107301:107464 [0] NCCL INFO Channel 08/0 : 0[53000] -> 8[53000] [send] via NET/AWS Libfabric/0/GDRDMA
+ip-10-0-9-192:1823:1990 [0] NCCL INFO Channel 09/0 : 8[53000] -> 0[53000] [send] via NET/AWS Libfabric/1/GDRDMA
+ip-10-0-10-4:107302:107477 [1] NCCL INFO Channel 06/0 : 1[64000] -> 9[64000] [send] via NET/AWS Libfabric/7/GDRDMA
+ip-10-0-9-192:1824:1993 [1] NCCL INFO Channel 12/0 : 9[64000] -> 1[64000] [send] via NET/AWS Libfabric/5/GDRDMA
+ip-10-0-10-4:107301:107464 [0] NCCL INFO Channel 09/0 : 0[53000] -> 8[53000] [send] via NET/AWS Libfabric/1/GDRDMA
+ip-10-0-9-192:1823:1990 [0] NCCL INFO Channel 10/0 : 8[53000] -> 0[53000] [send] via NET/AWS Libfabric/2/GDRDMA
+ip-10-0-10-4:107302:107477 [1] NCCL INFO Channel 07/0 : 1[64000] -> 9[64000] [send] via NET/AWS Libfabric/4/GDRDMA
+ip-10-0-9-192:1824:1993 [1] NCCL INFO Channel 13/0 : 9[64000] -> 1[64000] [send] via NET/AWS Libfabric/6/GDRDMA
+ip-10-0-10-4:107301:107464 [0] NCCL INFO Channel 10/0 : 0[53000] -> 8[53000] [send] via NET/AWS Libfabric/2/GDRDMA
+ip-10-0-9-192:1823:1990 [0] NCCL INFO Channel 11/0 : 8[53000] -> 0[53000] [send] via NET/AWS Libfabric/3/GDRDMA
+ip-10-0-10-4:107302:107477 [1] NCCL INFO Channel 12/0 : 1[64000] -> 9[64000] [send] via NET/AWS Libfabric/5/GDRDMA
+ip-10-0-9-192:1824:1993 [1] NCCL INFO Channel 14/0 : 9[64000] -> 1[64000] [send] via NET/AWS Libfabric/7/GDRDMA
+ip-10-0-10-4:107301:107464 [0] NCCL INFO Channel 11/0 : 0[53000] -> 8[53000] [send] via NET/AWS Libfabric/3/GDRDMA
+ip-10-0-10-4:107302:107477 [1] NCCL INFO Channel 13/0 : 1[64000] -> 9[64000] [send] via NET/AWS Libfabric/6/GDRDMA
+ip-10-0-9-192:1824:1993 [1] NCCL INFO Channel 15/0 : 9[64000] -> 1[64000] [send] via NET/AWS Libfabric/4/GDRDMA
+ip-10-0-10-4:107302:107477 [1] NCCL INFO Channel 14/0 : 1[64000] -> 9[64000] [send] via NET/AWS Libfabric/7/GDRDMA
+ip-10-0-10-4:107308:107478 [7] NCCL INFO Channel 00/0 : 7[ca000] -> 6[b9000] via P2P/IPC
+ip-10-0-10-4:107308:107478 [7] NCCL INFO Channel 01/0 : 7[ca000] -> 6[b9000] via P2P/IPC
+ip-10-0-10-4:107308:107478 [7] NCCL INFO Channel 02/0 : 7[ca000] -> 6[b9000] via P2P/IPC
+ip-10-0-9-192:1830:1995 [7] NCCL INFO Channel 00/0 : 15[ca000] -> 14[b9000] via P2P/IPC
+ip-10-0-10-4:107308:107478 [7] NCCL INFO Channel 03/0 : 7[ca000] -> 6[b9000] via P2P/IPC
+ip-10-0-9-192:1830:1995 [7] NCCL INFO Channel 01/0 : 15[ca000] -> 14[b9000] via P2P/IPC
+ip-10-0-10-4:107308:107478 [7] NCCL INFO Channel 08/0 : 7[ca000] -> 6[b9000] via P2P/IPC
+ip-10-0-9-192:1830:1995 [7] NCCL INFO Channel 02/0 : 15[ca000] -> 14[b9000] via P2P/IPC
+ip-10-0-10-4:107308:107478 [7] NCCL INFO Channel 09/0 : 7[ca000] -> 6[b9000] via P2P/IPC
+ip-10-0-10-4:107308:107478 [7] NCCL INFO Channel 10/0 : 7[ca000] -> 6[b9000] via P2P/IPC
+ip-10-0-9-192:1830:1995 [7] NCCL INFO Channel 03/0 : 15[ca000] -> 14[b9000] via P2P/IPC
+ip-10-0-9-192:1830:1995 [7] NCCL INFO Channel 08/0 : 15[ca000] -> 14[b9000] via P2P/IPC
+ip-10-0-10-4:107308:107478 [7] NCCL INFO Channel 11/0 : 7[ca000] -> 6[b9000] via P2P/IPC
+ip-10-0-9-192:1830:1995 [7] NCCL INFO Channel 09/0 : 15[ca000] -> 14[b9000] via P2P/IPC
+ip-10-0-9-192:1830:1995 [7] NCCL INFO Channel 10/0 : 15[ca000] -> 14[b9000] via P2P/IPC
+ip-10-0-9-192:1830:1995 [7] NCCL INFO Channel 11/0 : 15[ca000] -> 14[b9000] via P2P/IPC
+ip-10-0-10-4:107308:107478 [7] NCCL INFO Connected all trees
+ip-10-0-10-4:107308:107478 [7] NCCL INFO threadThresholds 8/8/64 | 128/8/64 | 512 | 512
+ip-10-0-10-4:107308:107478 [7] NCCL INFO 16 coll channels, 16 p2p channels, 2 p2p channels per peer
+ip-10-0-9-192:1830:1995 [7] NCCL INFO Connected all trees
+ip-10-0-9-192:1830:1995 [7] NCCL INFO threadThresholds 8/8/64 | 128/8/64 | 512 | 512
+ip-10-0-9-192:1830:1995 [7] NCCL INFO 16 coll channels, 16 p2p channels, 2 p2p channels per peer
+ip-10-0-10-4:107307:107476 [6] NCCL INFO Connected all trees
+ip-10-0-10-4:107307:107476 [6] NCCL INFO threadThresholds 8/8/64 | 128/8/64 | 512 | 512
+ip-10-0-10-4:107307:107476 [6] NCCL INFO 16 coll channels, 16 p2p channels, 2 p2p channels per peer
+ip-10-0-9-192:1829:1997 [6] NCCL INFO Connected all trees
+ip-10-0-9-192:1829:1997 [6] NCCL INFO threadThresholds 8/8/64 | 128/8/64 | 512 | 512
+ip-10-0-9-192:1829:1997 [6] NCCL INFO 16 coll channels, 16 p2p channels, 2 p2p channels per peer
+ip-10-0-10-4:107302:107477 [1] NCCL INFO Channel 15/0 : 1[64000] -> 9[64000] [send] via NET/AWS Libfabric/4/GDRDMA
+ip-10-0-9-192:1824:1993 [1] NCCL INFO Channel 00/0 : 9[64000] -> 8[53000] via P2P/IPC
+ip-10-0-9-192:1824:1993 [1] NCCL INFO Channel 01/0 : 9[64000] -> 8[53000] via P2P/IPC
+ip-10-0-9-192:1824:1993 [1] NCCL INFO Channel 02/0 : 9[64000] -> 8[53000] via P2P/IPC
+ip-10-0-9-192:1824:1993 [1] NCCL INFO Channel 03/0 : 9[64000] -> 8[53000] via P2P/IPC
+ip-10-0-9-192:1824:1993 [1] NCCL INFO Channel 08/0 : 9[64000] -> 8[53000] via P2P/IPC
+ip-10-0-9-192:1824:1993 [1] NCCL INFO Channel 09/0 : 9[64000] -> 8[53000] via P2P/IPC
+ip-10-0-9-192:1824:1993 [1] NCCL INFO Channel 10/0 : 9[64000] -> 8[53000] via P2P/IPC
+ip-10-0-9-192:1824:1993 [1] NCCL INFO Channel 11/0 : 9[64000] -> 8[53000] via P2P/IPC
+ip-10-0-10-4:107302:107477 [1] NCCL INFO Channel 00/0 : 1[64000] -> 0[53000] via P2P/IPC
+ip-10-0-10-4:107302:107477 [1] NCCL INFO Channel 01/0 : 1[64000] -> 0[53000] via P2P/IPC
+ip-10-0-10-4:107302:107477 [1] NCCL INFO Channel 02/0 : 1[64000] -> 0[53000] via P2P/IPC
+ip-10-0-10-4:107302:107477 [1] NCCL INFO Channel 03/0 : 1[64000] -> 0[53000] via P2P/IPC
+ip-10-0-10-4:107302:107477 [1] NCCL INFO Channel 08/0 : 1[64000] -> 0[53000] via P2P/IPC
+ip-10-0-10-4:107302:107477 [1] NCCL INFO Channel 09/0 : 1[64000] -> 0[53000] via P2P/IPC
+ip-10-0-10-4:107302:107477 [1] NCCL INFO Channel 10/0 : 1[64000] -> 0[53000] via P2P/IPC
+ip-10-0-10-4:107302:107477 [1] NCCL INFO Channel 11/0 : 1[64000] -> 0[53000] via P2P/IPC
+ip-10-0-9-192:1823:1990 [0] NCCL INFO Connected all trees
+ip-10-0-9-192:1823:1990 [0] NCCL INFO threadThresholds 8/8/64 | 128/8/64 | 512 | 512
+ip-10-0-9-192:1823:1990 [0] NCCL INFO 16 coll channels, 16 p2p channels, 2 p2p channels per peer
+ip-10-0-10-4:107301:107464 [0] NCCL INFO Connected all trees
+ip-10-0-10-4:107301:107464 [0] NCCL INFO threadThresholds 8/8/64 | 128/8/64 | 512 | 512
+ip-10-0-10-4:107301:107464 [0] NCCL INFO 16 coll channels, 16 p2p channels, 2 p2p channels per peer
+ip-10-0-10-4:107303:107475 [2] NCCL INFO Connected all trees
+ip-10-0-10-4:107303:107475 [2] NCCL INFO threadThresholds 8/8/64 | 128/8/64 | 512 | 512
+ip-10-0-10-4:107303:107475 [2] NCCL INFO 16 coll channels, 16 p2p channels, 2 p2p channels per peer
+ip-10-0-10-4:107302:107477 [1] NCCL INFO Connected all trees
+ip-10-0-10-4:107302:107477 [1] NCCL INFO threadThresholds 8/8/64 | 128/8/64 | 512 | 512
+ip-10-0-10-4:107302:107477 [1] NCCL INFO 16 coll channels, 16 p2p channels, 2 p2p channels per peer
+ip-10-0-9-192:1825:1991 [2] NCCL INFO Connected all trees
+ip-10-0-9-192:1825:1991 [2] NCCL INFO threadThresholds 8/8/64 | 128/8/64 | 512 | 512
+ip-10-0-9-192:1825:1991 [2] NCCL INFO 16 coll channels, 16 p2p channels, 2 p2p channels per peer
+ip-10-0-9-192:1824:1993 [1] NCCL INFO Connected all trees
+ip-10-0-9-192:1824:1993 [1] NCCL INFO threadThresholds 8/8/64 | 128/8/64 | 512 | 512
+ip-10-0-9-192:1824:1993 [1] NCCL INFO 16 coll channels, 16 p2p channels, 2 p2p channels per peer
+ip-10-0-10-4:107301:107464 [0] NCCL INFO comm 0x90033f0 rank 0 nranks 16 cudaDev 0 busId 53000 - Init COMPLETE
+#
+#                                                              out-of-place                       in-place
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)
+ip-10-0-9-192:1823:1990 [0] NCCL INFO comm 0xa5221a0 rank 8 nranks 16 cudaDev 0 busId 53000 - Init COMPLETE
+ip-10-0-10-4:107308:107478 [7] NCCL INFO comm 0x90f7c80 rank 7 nranks 16 cudaDev 7 busId ca000 - Init COMPLETE
+ip-10-0-10-4:107303:107475 [2] NCCL INFO comm 0xa924c00 rank 2 nranks 16 cudaDev 2 busId 75000 - Init COMPLETE
+ip-10-0-10-4:107302:107477 [1] NCCL INFO comm 0xa90cfb0 rank 1 nranks 16 cudaDev 1 busId 64000 - Init COMPLETE
+ip-10-0-10-4:107307:107476 [6] NCCL INFO comm 0x95f4020 rank 6 nranks 16 cudaDev 6 busId b9000 - Init COMPLETE
+ip-10-0-10-4:107306:107474 [5] NCCL INFO comm 0xa910c10 rank 5 nranks 16 cudaDev 5 busId a8000 - Init COMPLETE
+ip-10-0-10-4:107304:107479 [3] NCCL INFO comm 0xa5b7b20 rank 3 nranks 16 cudaDev 3 busId 86000 - Init COMPLETE
+ip-10-0-10-4:107305:107473 [4] NCCL INFO comm 0x99ed410 rank 4 nranks 16 cudaDev 4 busId 97000 - Init COMPLETE
+ip-10-0-9-192:1825:1991 [2] NCCL INFO comm 0xad17120 rank 10 nranks 16 cudaDev 2 busId 75000 - Init COMPLETE
+ip-10-0-9-192:1828:1992 [5] NCCL INFO comm 0xae2faf0 rank 13 nranks 16 cudaDev 5 busId a8000 - Init COMPLETE
+ip-10-0-9-192:1824:1993 [1] NCCL INFO comm 0x9d26b10 rank 9 nranks 16 cudaDev 1 busId 64000 - Init COMPLETE
+ip-10-0-9-192:1829:1997 [6] NCCL INFO comm 0xa1ae730 rank 14 nranks 16 cudaDev 6 busId b9000 - Init COMPLETE
+ip-10-0-9-192:1826:1994 [3] NCCL INFO comm 0xa92fda0 rank 11 nranks 16 cudaDev 3 busId 86000 - Init COMPLETE
+ip-10-0-9-192:1827:1996 [4] NCCL INFO comm 0xa9e9330 rank 12 nranks 16 cudaDev 4 busId 97000 - Init COMPLETE
+ip-10-0-9-192:1830:1995 [7] NCCL INFO comm 0xaa0aa60 rank 15 nranks 16 cudaDev 7 busId ca000 - Init COMPLETE
+      524288        131072     float     sum      -1    830.8    0.63    1.18      0    868.1    0.60    1.13      0
+     1048576        262144     float     sum      -1   1624.8    0.65    1.21      0   1629.4    0.64    1.21      0
+     2097152        524288     float     sum      -1   3261.0    0.64    1.21      0   3240.5    0.65    1.21      0
+     4194304       1048576     float     sum      -1    961.6    4.36    8.18      0    963.7    4.35    8.16      0
+     8388608       2097152     float     sum      -1    987.9    8.49   15.92      0    990.3    8.47   15.88      0
+    16777216       4194304     float     sum      -1   1490.3   11.26   21.11      0   1470.6   11.41   21.39      0
+    33554432       8388608     float     sum      -1   2527.8   13.27   24.89      0   2274.0   14.76   27.67      0
+    67108864      16777216     float     sum      -1   2136.7   31.41   58.89      0   2158.9   31.09   58.29      0
+   134217728      33554432     float     sum      -1   3599.9   37.28   69.91      0   3572.9   37.57   70.44      0
+   268435456      67108864     float     sum      -1   4722.4   56.84  106.58      0   4711.9   56.97  106.82      0
+ip-10-0-10-4:107308:107308 [7] NCCL INFO comm 0x90f7c80 rank 7 nranks 16 cudaDev 7 busId ca000 - Destroy COMPLETE
+ip-10-0-9-192:1830:1830 [7] NCCL INFO comm 0xaa0aa60 rank 15 nranks 16 cudaDev 7 busId ca000 - Destroy COMPLETE
+ip-10-0-10-4:107305:107305 [4] NCCL INFO comm 0x99ed410 rank 4 nranks 16 cudaDev 4 busId 97000 - Destroy COMPLETE
+ip-10-0-10-4:107307:107307 [6] NCCL INFO comm 0x95f4020 rank 6 nranks 16 cudaDev 6 busId b9000 - Destroy COMPLETE
+ip-10-0-10-4:107306:107306 [5] NCCL INFO comm 0xa910c10 rank 5 nranks 16 cudaDev 5 busId a8000 - Destroy COMPLETE
+ip-10-0-9-192:1826:1826 [3] NCCL INFO comm 0xa92fda0 rank 11 nranks 16 cudaDev 3 busId 86000 - Destroy COMPLETE
+ip-10-0-10-4:107304:107304 [3] NCCL INFO comm 0xa5b7b20 rank 3 nranks 16 cudaDev 3 busId 86000 - Destroy COMPLETE
+ip-10-0-9-192:1829:1829 [6] NCCL INFO comm 0xa1ae730 rank 14 nranks 16 cudaDev 6 busId b9000 - Destroy COMPLETE
+ip-10-0-9-192:1828:1828 [5] NCCL INFO comm 0xae2faf0 rank 13 nranks 16 cudaDev 5 busId a8000 - Destroy COMPLETE
+ip-10-0-9-192:1827:1827 [4] NCCL INFO comm 0xa9e9330 rank 12 nranks 16 cudaDev 4 busId 97000 - Destroy COMPLETE
+ip-10-0-10-4:107303:107303 [2] NCCL INFO comm 0xa924c00 rank 2 nranks 16 cudaDev 2 busId 75000 - Destroy COMPLETE
+ip-10-0-9-192:1825:1825 [2] NCCL INFO comm 0xad17120 rank 10 nranks 16 cudaDev 2 busId 75000 - Destroy COMPLETE
+ip-10-0-9-192:1823:1823 [0] NCCL INFO comm 0xa5221a0 rank 8 nranks 16 cudaDev 0 busId 53000 - Destroy COMPLETE
+ip-10-0-9-192:1824:1824 [1] NCCL INFO comm 0x9d26b10 rank 9 nranks 16 cudaDev 1 busId 64000 - Destroy COMPLETE
+ip-10-0-10-4:107301:107301 [0] NCCL INFO comm 0x90033f0 rank 0 nranks 16 cudaDev 0 busId 53000 - Destroy COMPLETE
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 31.0632
+#
+ip-10-0-10-4:107302:107302 [1] NCCL INFO comm 0xa90cfb0 rank 1 nranks 16 cudaDev 1 busId 64000 - Destroy COMPLETE
