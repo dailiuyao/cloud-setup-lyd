@@ -1,1 +1,3 @@
-rsync --progress --stats -ruzath -e "ssh -i /home/liuyao/.ssh/id_rsa_vir" "ec2-user@18.223.104.188:/home/ec2-user/ly-custom/experiments_output" /home/liuyao/scratch/deps/aws-setup-lyd/results_64_H100
+rsync --progress --stats -ruzath -e "ssh -i /home/liuyao/.ssh/id_rsa_vir" "ec2-user@18.223.104.188:/mnt/sharedfs/ly-experiments/aws-setup-lyd/results_64_H100/experiments_output" /home/liuyao/scratch/deps/aws-setup-lyd/results_64_H100
+
+# rsync --progress --stats -ruzath -e "ssh -i /home/liuyao/.ssh/id_rsa_vir" "ec2-user@18.223.104.188:/mnt/sharedfs/ly-experiments/experiments_output" /home/liuyao/AWS-Results
