@@ -4,7 +4,7 @@
 
 mpirun --hostfile ~/hostfile --map-by ppr:1:node mkdir /home/ec2-user/deps/aws-ofi-nccl-lyd-v1
 
-mpirun --hostfile ~/hostfile --map-by ppr:1:node tar -xzvf /home/ec2-user/deps/aws-ofi-nccl-1.7.4-aws.tar.gz -C /home/ec2-user/deps/aws-ofi-nccl-lyd-v1
+mpirun --hostfile ~/hostfile --map-by ppr:1:node tar -xzvf /mnt/sharedfs/ly-experiments/aws-ofi-nccl-1.8.1-aws.tar.gz -C ./aws-ofi-nccl-lyd
 
 mpirun --hostfile ~/hostfile --map-by ppr:1:node /home/ec2-user/deps/aws-ofi-nccl-lyd-v1/aws-ofi-nccl-1.7.4-aws/configure \
     --prefix=/mnt/sharedfs/ly-experiments/aws-ofi-nccl-lyd  \
@@ -52,7 +52,7 @@ make -j src.build
 # System Summary
 
 ## Persistent shared data store
-- /mnt/sharedfs (This should be mounted if you're running this instance in a cluster environment)
+# - /mnt/sharedfs (This should be mounted if you're running this instance in a cluster environment)
 
 ## Compiler Versions
 - gcc 7.3.1 (Default): /usr/bin/gcc
@@ -87,140 +87,65 @@ make -j src.build
     $HOME/stock/nccl-tests/build/all_reduce_perf -b 8 -e 16G -f 2 -g 1 -c 1 -n 100
 ```
 
-
+##### MSCCL ######
 
 mpirun --hostfile ~/hostfile --map-by ppr:8:node \
     -x CUDA_HOME="/usr/local/cuda" \
     -x CUDA_PATH="/usr/local/cuda" \
-    -x NCCL_HOME="/mnt/sharedfs/ly-experiments/msccl/build" \
+    -x NCCL_HOME="/mnt/sharedfs/ly-experiments/msccl-lyd/build" \
     -x MPI_HOME="/opt/amazon/openmpi" \
-    -x LD_LIBRARY_PATH="/opt/aws-ofi-nccl/lib:/opt/amazon/openmpi/lib64:/mnt/sharedfs/ly-experiments/msccl/build/lib:/usr/local/cuda/lib64:${LD_LIBRARY_PATH}" \
+    -x LD_LIBRARY_PATH="/opt/aws-ofi-nccl/lib:/opt/amazon/openmpi/lib64:/mnt/sharedfs/ly-experiments/msccl-lyd/build/lib:/usr/local/cuda/lib64:${LD_LIBRARY_PATH}" \
     -x NCCL_DEBUG="TRACE" \
     -x FI_EFA_FORK_SAFE=1 \
-    -x MSCCL_XML_FILES="/mnt/sharedfs/ly-experiments/msccl_tools_lyd/examples/xml/xml_lyd/aws-test/8nic/64gpus/allreduce_ring_node8_gpu64_mcl12_mck64_gan0.xml" \
+    -x NCCL_P2P_NET_CHUNKSIZE=65536 \
+    -x MSCCL_XML_FILES="/mnt/sharedfs/ly-experiments/msccl-tools-lyd/examples/xml/xml_lyd/aws-test/32nic/32gpus/allreduce_ring_node4_gpu32_mcl4_mck2_gan0.xml" \
     -x GENMSCCLXML=1 \
     --mca btl tcp,self --mca btl_tcp_if_exclude lo,docker0 --bind-to none \
-    /mnt/sharedfs/ly-experiments/msccl-test/build/all_reduce_perf \
+    /mnt/sharedfs/ly-experiments/nccl-tests-lyd/build/all_reduce_perf \
     --nthreads 1 \
     --ngpus 1 \
-    --minbytes 96K \
-    --maxbytes 384M \
+    --minbytes 64K \
+    --maxbytes 2G \
     --stepfactor 2 \
     --op sum \
     --datatype float \
     --iters 20 \
     --warmup_iters 5 \
-    > allreduce_ring_node8_gpu64_mcl12_mck64_gan0_buff4.log 2>&1
+    > allreduce_ring_node4_gpu32_mcl4_mck2_gan0.log 2>&1
 
-    /home/liuyao/scratch/deps/msccl_tools_lyd/examples/xml/xml_lyd/basic_msccl/allreduce_basic_binary_tree_64gpus_1tree.xml
+/home/liuyao/scratch/deps/msccl_tools_lyd/examples/xml/xml_lyd/aws-test/32nic/32gpus/allreduce_ring_node4_gpu32_mcl4_mck2_gan0.xml
 
 
+##### NCCL 2.12.12 ######
 
 mpirun --hostfile ~/hostfile --map-by ppr:8:node \
     -x CUDA_HOME="/usr/local/cuda" \
     -x CUDA_PATH="/usr/local/cuda" \
-    -x NCCL_HOME="/opt/nccl/build" \
+    -x NCCL_HOME="/mnt/sharedfs/ly-experiments/nccl_2_12_12/build" \
     -x MPI_HOME="/opt/amazon/openmpi" \
-    -x LD_LIBRARY_PATH="/opt/aws-ofi-nccl/lib:/opt/amazon/openmpi/lib64:/opt/nccl/build/lib:/usr/local/cuda/lib64:${LD_LIBRARY_PATH}" \
+    -x LD_LIBRARY_PATH="/opt/aws-ofi-nccl/lib:/opt/amazon/openmpi/lib64:/mnt/sharedfs/ly-experiments/nccl_2_12_12/build/lib:/usr/local/cuda/lib64:${LD_LIBRARY_PATH}" \
     -x NCCL_DEBUG="TRACE" \
     -x FI_EFA_FORK_SAFE=1 \
+    -x NCCL_MIN_NCHANNELS=32 \
+    -x NCCL_MAX_NCHANNELS=32 \
     -x NCCL_ALGO=RING \
     -x GENMSCCLXML=1 \
     --mca btl tcp,self --mca btl_tcp_if_exclude lo,docker0 --bind-to none \
-    /mnt/sharedfs/ly-experiments/msccl-test/build/all_reduce_perf \
+    /mnt/sharedfs/ly-experiments/nccl-tests-lyd/build/all_reduce_perf \
     --nthreads 1 \
     --ngpus 1 \
-    --minbytes 96K \
-    --maxbytes 384M \
+    --minbytes 64K \
+    --maxbytes 2G \
     --stepfactor 2 \
     --op sum \
     --datatype float \
     --iters 20 \
     --warmup_iters 5 \
-    > output_nccl_sum_float_ring.log 2>&1
+    > output_nccl_2_12_12_sum_float_ring_ch32.log 2>&1
 
     /home/liuyao/scratch/deps/msccl_tools_lyd/examples/xml/xml_lyd/aws-test/8nic/64gpus/allreduce_binary-tree_node8_gpu64_mcl4_mck1_gan0.xml
 
-
-mpirun --hostfile ~/hostfile --map-by ppr:8:node \
-    -x CUDA_HOME="/usr/local/cuda" \
-    -x CUDA_PATH="/usr/local/cuda" \
-    -x NCCL_HOME="/opt/nccl-lyd/build" \
-    -x MPI_HOME="/opt/amazon/openmpi" \
-    -x LD_LIBRARY_PATH="/mnt/sharedfs/ly-experiments/aws-ofi-nccl-lyd/lib:/opt/amazon/openmpi/lib64:/opt/nccl/build/lib:/usr/local/cuda/lib64:${LD_LIBRARY_PATH}" \
-    -x NCCL_DEBUG="TRACE" \
-    -x NCCL_ALGO="TREE" \
-    -x FI_EFA_FORK_SAFE=1 \
-    -x GENMSCCLXML=1 \
-    --mca btl tcp,self --mca btl_tcp_if_exclude lo,docker0 --bind-to none \
-    /home/ec2-user/ly-custom/nccl-tests-lyd/build/all_reduce_perf \
-    --nthreads 1 \
-    --ngpus 1 \
-    --minbytes 512K \
-    --maxbytes 256M \
-    --stepfactor 2 \
-    --op sum \
-    --datatype float \
-    --iters 20 \
-    --warmup_iters 5
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-############## MSCCL TEST for AWS optimization (only for trinomial tree) ##############
-
-mpirun --hostfile ~/hostfile --map-by ppr:8:node \
-    -x CUDA_HOME="/usr/local/cuda" \
-    -x CUDA_PATH="/usr/local/cuda" \
-    -x NCCL_HOME="/home/ec2-user/deps/msccl/build" \
-    -x MPI_HOME="/opt/amazon/openmpi" \
-    -x LD_LIBRARY_PATH="/opt/aws-ofi-nccl/lib:/opt/amazon/openmpi/lib64:/home/ec2-user/deps/msccl/build/lib:/usr/local/cuda/lib64:${LD_LIBRARY_PATH}" \
-    -x NCCL_DEBUG="INFO" \
-    -x FI_EFA_FORK_SAFE=1 \
-    -x MSCCL_XML_FILES="/home/ec2-user/deps/msccl-tools-lyd/examples/xml/xml_lyd/aws-test/1nic/16gpus/allreduce_trinomial_tree_2ch_128chunk.xml" \
-    -x GENMSCCLXML=1 \
-    --mca btl tcp,self --mca btl_tcp_if_exclude lo,docker0 --bind-to none \
-    /home/ec2-user/deps/nccl-tests-lyd/build/all_reduce_perf \
-    --nthreads 1 \
-    --ngpus 1 \
-    --minbytes 768K \
-    --maxbytes 384M \
-    --stepfactor 2 \
-    --op sum \
-    --datatype float \
-    --iters 20 \
-    --warmup_iters 5 
-    # > output.txt 2>&1
-
-############################# Inter Node NCCL Experiments #############################
+##### NCCL ######
 
 mpirun --hostfile ~/hostfile --map-by ppr:8:node \
     -x CUDA_HOME="/usr/local/cuda" \
@@ -233,101 +158,71 @@ mpirun --hostfile ~/hostfile --map-by ppr:8:node \
     -x NCCL_ALGO=TREE \
     -x GENMSCCLXML=1 \
     --mca btl tcp,self --mca btl_tcp_if_exclude lo,docker0 --bind-to none \
-    /home/ec2-user/ly-custom/nccl-tests-lyd/build/all_reduce_perf \
+    /mnt/sharedfs/ly-experiments/nccl-tests-lyd/build/all_reduce_perf \
     --nthreads 1 \
     --ngpus 1 \
-    --minbytes 128K \
-    --maxbytes 512M \
+    --minbytes 64K \
+    --maxbytes 2G \
     --stepfactor 2 \
     --op sum \
     --datatype float \
     --iters 20 \
     --warmup_iters 5 \
-    > output_nccl_sum_float_tree.log 2>&1
+    > output_nccl_sum_float_tree_buff_2.log 2>&1
 
-############################# Intra Node NCCL Experiments #############################
 
-    mpirun -n 8 --oversubscribe \
-    -x CUDA_HOME="/usr/local/cuda" \
-    -x CUDA_PATH="/usr/local/cuda" \
-    -x NCCL_HOME="/opt/nccl/build" \
-    -x MPI_HOME="/opt/amazon/openmpi" \
-    -x LD_LIBRARY_PATH="/opt/aws-ofi-nccl/lib:/opt/amazon/openmpi/lib64:/opt/nccl/build/lib:/usr/local/cuda/lib64:${LD_LIBRARY_PATH}" \
-    -x NCCL_DEBUG="INFO" \
-    -x FI_EFA_FORK_SAFE=1 \
-    -x NCCL_ALGO=RING \
-    -x GENMSCCLXML=1 \
-    --mca btl tcp,self --mca btl_tcp_if_exclude lo,docker0 --bind-to none \
-    /home/ec2-user/deps/nccl-tests-lyd/build/all_reduce_perf \
-    --nthreads 1 \
-    --ngpus 1 \
-    --minbytes 128K \
-    --maxbytes 512M \
-    --stepfactor 2 \
-    --op sum \
-    --datatype float \
-    --iters 20 \
-    --warmup_iters 5 \
-    > output_nccl_sum_float_ring_intra.log 2>&1
+    -x NCCL_MIN_NCHANNELS=32 \
+    -x NCCL_MAX_NCHANNELS=32 \
 
-############################# Intra Node MSCCL Experiments #############################
+    /home/liuyao/scratch/deps/msccl_tools_lyd/examples/xml/xml_lyd/aws-test/8nic/64gpus/allreduce_binary-tree_node8_gpu64_mcl4_mck1_gan0.xml
 
-    mpirun -n 8 --oversubscribe \
-    -x CUDA_HOME="/usr/local/cuda" \
-    -x CUDA_PATH="/usr/local/cuda" \
-    -x NCCL_HOME="/home/ec2-user/deps/msccl/build" \
-    -x MPI_HOME="/opt/amazon/openmpi" \
-    -x LD_LIBRARY_PATH="/opt/aws-ofi-nccl/lib:/opt/amazon/openmpi/lib64:/home/ec2-user/deps/msccl/build/lib:/usr/local/cuda/lib64:${LD_LIBRARY_PATH}" \
-    -x NCCL_DEBUG="INFO" \
-    -x FI_EFA_FORK_SAFE=1 \
-    -x GENMSCCLXML=1 \
-    -x NCCL_ALGO="MSCCL,TREE,RING" \
-    -x MSCCL_XML_FILES="/home/ec2-user/deps/msccl-tools-lyd/examples/xml/xml_lyd/aws-test/intra/allreduce_ring_8ch_4chunk.xml" \
-    --mca btl tcp,self --mca btl_tcp_if_exclude lo,docker0 --bind-to none \
-    /home/ec2-user/deps/nccl-tests-lyd/build/all_reduce_perf \
-    --nthreads 1 \
-    --ngpus 1 \
-    --minbytes 128K \
-    --maxbytes 512M \
-    --stepfactor 2 \
-    --op sum \
-    --datatype float \
-    --iters 20 \
-    --warmup_iters 5 \
-    >> output_nccl_sum_float_msccl_intra.log 2>&1
 
-allreduce_binary_tree_2ch_256chunk
-allreduce_binomial_tree_2ch_128chunk
-allreduce_recursive_doubling_2ch_32chunk
-allreduce_recursive_doubling_halving_2ch_32chunk
-allreduce_ring_8ch_4chunk
-allreduce_trinomial_tree_1ch_128chunk
-allreduce_trinomial_tree_2ch_128chunk
 
-# only for trinomial tree
-    mpirun -n 8 --oversubscribe \
-    -x CUDA_HOME="/usr/local/cuda" \
-    -x CUDA_PATH="/usr/local/cuda" \
-    -x NCCL_HOME="/home/ec2-user/deps/msccl/build" \
-    -x MPI_HOME="/opt/amazon/openmpi" \
-    -x LD_LIBRARY_PATH="/opt/aws-ofi-nccl/lib:/opt/amazon/openmpi/lib64:/home/ec2-user/deps/msccl/build/lib:/usr/local/cuda/lib64:${LD_LIBRARY_PATH}" \
-    -x NCCL_DEBUG="INFO" \
-    -x FI_EFA_FORK_SAFE=1 \
-    -x GENMSCCLXML=1 \
-    -x NCCL_ALGO="MSCCL,TREE,RING" \
-    -x MSCCL_XML_FILES="/home/ec2-user/deps/msccl-tools-lyd/examples/xml/xml_lyd/aws-test/intra/allreduce_trinomial_tree_2ch_128chunk.xml" \
-    --mca btl tcp,self --mca btl_tcp_if_exclude lo,docker0 --bind-to none \
-    /home/ec2-user/deps/nccl-tests-lyd/build/all_reduce_perf \
-    --nthreads 1 \
-    --ngpus 1 \
-    --minbytes 768K \
-    --maxbytes 384M \
-    --stepfactor 2 \
-    --op sum \
-    --datatype float \
-    --iters 20 \
-    --warmup_iters 5 \
-    >> output_nccl_sum_float_msccl_intra.log 2>&1
+
+
+##################################### PARAM TEST ####################################
+ conda install pytorch pytorch-cuda=12.4 -c pytorch-nightly -c nvidia
+mpirun --hostfile ~/hostfile --map-by ppr:8:node /home/ec2-user/deps/aws-ofi-nccl-lyd-v1/aws-ofi-nccl-1.7.4-aws/configure \
+
+mpirun --hostfile ~/hostfile --map-by ppr:8:node ./param/train/comms/pt/comms.py --master-ip ${hosts[1]} --w 100 --n 300 --b 64K --e 2G --f 2 --z 1 --collective all_reduce 
+
+mpirun -np <num-processes> ./comms.py \ 
+--master-ip xxx.xx.x.x 
+--b <begin-size> \ 
+--e <end-size> \ 
+--n <num-iters> \ 
+--f <step-factor> \ 
+--z <blocking/non-blocking> \ 
+--collective <collective-to-test> \ 
+--backend nccl \ 
+--device cuda 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ############## notes for AllReduce experiments on AWS SC24 ###############
 1. -x OFI_NCCL_NIC_DUP_CONNS=2
