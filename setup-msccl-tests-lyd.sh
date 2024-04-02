@@ -6,8 +6,8 @@ set -e -x
 # Configuration Variables
 export NVCC_GENCODE="-gencode=arch=compute_90,code=sm_90"
 export CUDA_HOME="/usr/local/cuda"
-export NCCL_DIR="/mnt/sharedfs/ly-experiments/msccl"
-export NCCL_TEST_DIR="/mnt/sharedfs/ly-experiments/msccl-test"
+export NCCL_DIR="/mnt/sharedfs/ly-experiments/msccl-lyd"
+export NCCL_TEST_DIR="/mnt/sharedfs/ly-experiments/nccl-tests-lyd"
 export NCCL_COMMIT="algorithm_test_CCLadviser"
 export NCCL_TEST_COMMIT="nccl-test-profile-msccl"
 export MPI_HOME="/opt/amazon/openmpi"
@@ -33,11 +33,11 @@ fi
 # Move to the NCCL directory
 pushd "${NCCL_DIR}" || exit
 
-# Fetch latest changes
-git fetch --all
+# # Fetch latest changes
+# git fetch --all
 
-# Checkout the correct commit
-git checkout "${NCCL_COMMIT}"
+# # Checkout the correct commit
+# git checkout "${NCCL_COMMIT}"
 
 # Build NCCL
 make -j src.build
@@ -50,37 +50,37 @@ popd || exit
 
 
 
-export NCCL_TEST_HOME="${NCCL_TEST_DIR}/build"
+# export NCCL_TEST_HOME="${NCCL_TEST_DIR}/build"
 
-export NCCL_HOME="${NCCL_DIR}/build" 
+# export NCCL_HOME="${NCCL_DIR}/build" 
 
-# Set up PATHs for CUDA
-export LD_LIBRARY_PATH="${NCCL_HOME}/lib:${LD_LIBRARY_PATH}"
-export C_INCLUDE_PATH="${NCCL_HOME}/include:$C_INCLUDE_PATH"
+# # Set up PATHs for CUDA
+# export LD_LIBRARY_PATH="${NCCL_HOME}/lib:${LD_LIBRARY_PATH}"
+# export C_INCLUDE_PATH="${NCCL_HOME}/include:$C_INCLUDE_PATH"
 
-# Create a directory in tmp that we'll use during the setup process
-mkdir -p "${TEMP_DIR}"
+# # Create a directory in tmp that we'll use during the setup process
+# mkdir -p "${TEMP_DIR}"
 
-# Clone the NCCL repo if it doesn't already exist
-if [ ! -d "${NCCL_TEST_DIR}" ]; then
-    git clone https://github.com/dailiuyao/nccl-tests.git "${NCCL_TEST_DIR}"
-fi
+# # Clone the NCCL repo if it doesn't already exist
+# if [ ! -d "${NCCL_TEST_DIR}" ]; then
+#     git clone https://github.com/dailiuyao/nccl-tests.git "${NCCL_TEST_DIR}"
+# fi
 
-# Move to the NCCL directory
-pushd "${NCCL_TEST_DIR}" || exit
+# # Move to the NCCL directory
+# pushd "${NCCL_TEST_DIR}" || exit
 
-# Fetch latest changes
-git fetch --all
+# # Fetch latest changes
+# git fetch --all
 
-# Checkout the correct commit
-git checkout "${NCCL_TEST_COMMIT}"
+# # Checkout the correct commit
+# git checkout "${NCCL_TEST_COMMIT}"
 
-# Build NCCL
-make MPI=1
+# # Build NCCL
+# make MPI=1
 
 
-# Delete the directory in tmp
-rm -rf "${TEMP_DIR}"
+# # Delete the directory in tmp
+# rm -rf "${TEMP_DIR}"
 
-# Exit the NCCL directory
-popd || exit
+# # Exit the NCCL directory
+# popd || exit
