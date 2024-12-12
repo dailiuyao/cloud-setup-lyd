@@ -1,0 +1,7 @@
+Host 34.168.35.180
+    User lyd
+    IdentityFile ~/.ssh/id_cloud
+
+Host 35.230.3.106
+    User lyd
+    IdentityFile ~/.ssh/id_cloud
