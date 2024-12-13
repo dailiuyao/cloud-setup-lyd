@@ -1,5 +1,7 @@
 #!/bin/bash
 
+export SHARED_HOME_DIRECTORY=/sharedfs
+
 source /sharedfs/spack/share/spack/setup-env.sh
 
 spack load gcc@11.5.0
@@ -9,6 +11,9 @@ export MPI_HOME=/sharedfs/spack/opt/spack/linux-debian11-broadwell/gcc-14.2.0/mp
 export PATH="${MPI_HOME}/bin:$PATH"
 export LD_LIBRARY_PATH="${MPI_HOME}/lib:$LD_LIBRARY_PATH"
 export CUDA_HOME=/usr/local/cuda
+
+export NCCL_NET_PLUGIN_HOME=${SHARED_HOME_DIRECTORY}/nccl-fastsocket
+export LD_LIBRARY_PATH=${SHARED_HOME_DIRECTORY}/nccl-fastsocket/bazel-bin:$LD_LIBRARY_PATH
 
 NCCL_SRC_LOCATION="/sharedfs/nccl"
 export NCCL_SRC_LOCATION
